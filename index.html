@@ -4,20 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>RID INDUSTRIAS MX — Manufactura de Precisión · Ciudad Sahagún, Hidalgo</title>
-<meta name="description" content="Centro de manufactura de precisión en Ciudad Sahagún, Hidalgo. Corte láser fibra y CO₂, router CNC, fabricación de maquinaria, soluciones arquitectónicas. ISO 9001:2015. Est. 2005. Respuesta en 24h.">
+<meta name="description" content="Centro de manufactura integral de precisión en Ciudad Sahagún, Hidalgo. Corte láser fibra y CO₂, router CNC, fabricación de maquinaria, soluciones arquitectónicas. ISO 9001:2015. Est. 2005.">
 <meta name="theme-color" content="#1A1C1E">
 <meta property="og:title" content="RID INDUSTRIAS MX — Manufactura de Precisión">
-<meta property="og:description" content="Corte láser, CNC y fabricación industrial en Ciudad Sahagún. ISO 9001:2015. Cotización en 24h.">
+<meta property="og:description" content="Manufactura integral de precisión en Ciudad Sahagún. ISO 9001:2015. Cotización en 24h.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ═══════════════════════════════════════════════════════════════════════
-   RID INDUSTRIAS MX — PLATAFORMA INDUSTRIAL v3.0
-   "Plano Técnico de Alta Gama" — SISTEMA DE CONVERSIÓN INDUSTRIAL
-   Mobile-First · Firebase CMS · Lead Capture Engine
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   RID INDUSTRIAS MX — PLATAFORMA INDUSTRIAL v4.0 "MECATRÓNICA PRO"
+   Scroll-Driven Assembly · Firebase CMS · Lead Engine
+═══════════════════════════════════════════════════════════════════ */
 :root {
   --ink:          #1A1C1E;
   --ink-mid:      #3D4145;
@@ -32,7 +31,7 @@
   --steel:        #546475;
   --amber:        #B8860B;
   --amber-light:  #D4A017;
-  --amber-glow:   rgba(184,134,11,0.15);
+  --amber-glow:   rgba(184,134,11,0.12);
   --danger:       #c0392b;
   --success:      #27ae60;
   --radius:       2px;
@@ -61,7 +60,7 @@ img { max-width: 100%; display: block; }
 ::-webkit-scrollbar-track { background: var(--parchment); }
 ::-webkit-scrollbar-thumb { background: var(--navy); }
 
-/* Blueprint grid */
+/* Blueprint grid overlay */
 body::after {
   content: '';
   position: fixed; inset: 0;
@@ -103,9 +102,9 @@ body::after {
 }
 .anno-num { font-family: var(--font-mono); font-size: clamp(8px,2vw,9px); color: var(--amber); letter-spacing: 0.1em; }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   URGENCY BAND — top of page conversion trigger
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   URGENCY BAND
+═══════════════════════════════════════════════════════════════════ */
 #urgency-band {
   background: var(--navy);
   padding: 8px var(--pad-x);
@@ -117,29 +116,14 @@ body::after {
   position: relative;
   z-index: 201;
 }
-.urgency-text {
-  font-family: var(--font-mono);
-  font-size: clamp(9px, 2.5vw, 10px);
-  letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.75);
-  text-transform: uppercase;
-}
-.urgency-cta {
-  font-family: var(--font-mono);
-  font-size: clamp(9px, 2.5vw, 10px);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--amber-light);
-  text-decoration: none;
-  border-bottom: 1px solid var(--amber);
-  transition: color 0.15s;
-}
+.urgency-text { font-family: var(--font-mono); font-size: clamp(9px, 2.5vw, 10px); letter-spacing: 0.14em; color: rgba(255,255,255,0.75); text-transform: uppercase; }
+.urgency-cta { font-family: var(--font-mono); font-size: clamp(9px, 2.5vw, 10px); letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber-light); text-decoration: none; border-bottom: 1px solid var(--amber); transition: color 0.15s; }
 .urgency-cta:hover { color: white; }
 .urgency-dot { width: 5px; height: 5px; background: var(--amber); border-radius: 50%; animation: pulse 2s infinite; }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    NAVIGATION
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 nav {
   position: sticky;
   top: 0; left: 0; right: 0;
@@ -148,29 +132,17 @@ nav {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--rule);
-  transition: top 0.2s;
 }
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--nav-h);
-  padding: 0 var(--pad-x);
-  max-width: 1320px;
-  margin: 0 auto;
-  gap: 12px;
-}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); padding: 0 var(--pad-x); max-width: 1320px; margin: 0 auto; gap: 12px; }
 .nav-logo { display: flex; flex-direction: column; text-decoration: none; flex-shrink: 0; }
 .nav-logo-mark { font-family: var(--font-display); font-size: clamp(14px,3.5vw,18px); font-weight: 700; color: var(--navy); letter-spacing: 0.06em; line-height: 1; }
 .nav-logo-mark sup { font-family: var(--font-mono); font-size: 7px; vertical-align: super; color: var(--amber); letter-spacing: 0.1em; }
 .nav-logo-sub { font-family: var(--font-mono); font-size: clamp(6px,1.5vw,7.5px); color: var(--ink-light); letter-spacing: 0.22em; text-transform: uppercase; margin-top: 3px; white-space: nowrap; }
-
 .nav-links { display: none; gap: 0; list-style: none; height: var(--nav-h); }
 .nav-links li { height: 100%; }
 .nav-links a { display: flex; align-items: center; height: 100%; padding: 0 16px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; border-right: 1px solid var(--rule); transition: color 0.2s, background 0.2s; }
 .nav-links li:first-child a { border-left: 1px solid var(--rule); }
 .nav-links a:hover, .nav-links a.active { color: var(--navy); background: rgba(27,45,79,0.04); }
-
 .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 .nav-iso { display: none; font-family: var(--font-mono); font-size: 8px; color: var(--amber); letter-spacing: 0.12em; border: 1px solid var(--amber); padding: 3px 7px; align-items: center; gap: 4px; }
 .nav-iso::before { content: '✦'; font-size: 7px; }
@@ -179,33 +151,30 @@ nav {
 .nav-admin-badge::before { content: '◈'; font-size: 8px; }
 .nav-cta { font-family: var(--font-mono); font-size: clamp(8px,2vw,10px); letter-spacing: 0.14em; text-transform: uppercase; color: var(--paper); background: var(--navy); border: none; padding: clamp(8px,2vw,10px) clamp(12px,3vw,20px); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; transition: background 0.2s; white-space: nowrap; font-weight: 500; min-height: 44px; }
 .nav-cta:hover { background: var(--amber); }
-
-.nav-hamburger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 10px; background: none; border: 1px solid var(--rule); cursor: pointer; transition: border-color 0.2s; flex-shrink: 0; }
-.nav-hamburger:hover { border-color: var(--navy); }
+.nav-hamburger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 10px; background: none; border: 1px solid var(--rule); cursor: pointer; flex-shrink: 0; }
 .nav-hamburger span { display: block; width: 100%; height: 1px; background: var(--navy); transition: all 0.3s; transform-origin: center; }
 .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
 .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
-
 .nav-drawer { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: rgba(245,242,236,0.98); backdrop-filter: blur(16px); border-bottom: 1px solid var(--rule); z-index: 190; max-height: calc(100vh - var(--nav-h)); overflow-y: auto; }
 .nav-drawer.open { display: block; }
 .nav-drawer-links { list-style: none; }
 .nav-drawer-links li { border-bottom: 1px solid var(--rule); }
 .nav-drawer-links a { display: flex; align-items: center; padding: 18px var(--pad-x); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; min-height: 56px; transition: background 0.15s, color 0.15s; }
-.nav-drawer-links a:hover, .nav-drawer-links a.active { color: var(--navy); background: rgba(27,45,79,0.04); }
-.nav-drawer-footer { padding: 16px var(--pad-x) 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.nav-drawer-links a:hover { color: var(--navy); background: rgba(27,45,79,0.04); }
+.nav-drawer-footer { padding: 16px var(--pad-x) 24px; }
 body.admin-mode nav { top: var(--toolbar-h); }
 body.admin-mode .nav-drawer { top: calc(var(--nav-h) + var(--toolbar-h)); }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    ADMIN TOOLBAR
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 #admin-toolbar { display: none; position: fixed; top: 0; left: 0; right: 0; z-index: 210; background: rgba(27,45,79,0.98); border-bottom: 2px solid var(--amber); padding: 0 var(--pad-x); align-items: center; justify-content: space-between; gap: 12px; backdrop-filter: blur(8px); height: 44px; }
 #admin-toolbar.active { display: flex; }
 .toolbar-left { display: flex; align-items: center; gap: 12px; flex-shrink: 0; min-width: 0; }
 .toolbar-mode-badge { font-family: var(--font-mono); font-size: clamp(8px,2vw,9px); letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); display: flex; align-items: center; gap: 5px; white-space: nowrap; }
 .toolbar-mode-badge::before { content: '◈'; animation: pulse 2s infinite; }
-.toolbar-user { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.1em; color: rgba(255,255,255,0.35); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: none; }
+.toolbar-user { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.1em; color: rgba(255,255,255,0.35); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 #save-status-wrap { display: flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 2px; transition: all 0.3s; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); }
 #save-status-wrap.state-saving { background: rgba(184,134,11,0.2); border-color: var(--amber); animation: savePulse 1s ease-in-out infinite; }
 #save-status-wrap.state-saved { background: rgba(39,174,96,0.2); border-color: #27ae60; }
@@ -227,10 +196,12 @@ body.admin-mode .nav-drawer { top: calc(var(--nav-h) + var(--toolbar-h)); }
 .toolbar-btn:hover { border-color: var(--amber); color: var(--amber); }
 .toolbar-btn.danger { color: rgba(255,120,120,0.7); }
 .toolbar-btn.danger:hover { border-color: rgba(255,100,100,0.6); color: rgba(255,100,100,0.95); }
+.toolbar-btn.primary { background: var(--amber); border-color: var(--amber); color: var(--ink); font-weight: 500; }
+.toolbar-btn.primary:hover { background: var(--amber-light); }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   HERO — v3: Más agresivo comercialmente
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   HERO — v4 Scroll-Driven Assembly
+═══════════════════════════════════════════════════════════════════ */
 #inicio {
   padding-top: var(--nav-h);
   position: relative;
@@ -240,31 +211,10 @@ body.admin-mode .nav-drawer { top: calc(var(--nav-h) + var(--toolbar-h)); }
 }
 body.admin-mode #inicio { padding-top: calc(var(--nav-h) + var(--toolbar-h)); }
 
-/* NUEVO: Hero trust bar */
-.hero-trust-bar {
-  background: var(--paper);
-  border-bottom: 1px solid var(--rule);
-  padding: 0 var(--pad-x);
-}
-.hero-trust-inner {
-  max-width: 1320px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
+.hero-trust-bar { background: var(--paper); border-bottom: 1px solid var(--rule); padding: 0 var(--pad-x); }
+.hero-trust-inner { max-width: 1320px; margin: 0 auto; display: flex; align-items: center; gap: 0; overflow-x: auto; scrollbar-width: none; }
 .hero-trust-inner::-webkit-scrollbar { display: none; }
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-right: 1px solid var(--rule);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
+.trust-item { display: flex; align-items: center; gap: 8px; padding: 10px 20px; border-right: 1px solid var(--rule); white-space: nowrap; flex-shrink: 0; }
 .trust-item:last-child { border-right: none; }
 .trust-item-icon { font-size: 12px; color: var(--amber); }
 .trust-item-text { font-family: var(--font-mono); font-size: clamp(8px,2vw,9px); letter-spacing: 0.1em; color: var(--ink-mid); text-transform: uppercase; }
@@ -276,69 +226,42 @@ body.admin-mode #inicio { padding-top: calc(var(--nav-h) + var(--toolbar-h)); }
 
 .hero-body { display: grid; grid-template-columns: 1fr; max-width: 1320px; margin: 0 auto; width: 100%; padding: 0 var(--pad-x); }
 .hero-content { display: flex; flex-direction: column; justify-content: center; padding: clamp(32px,6vw,60px) 0; }
-
-/* NUEVO: Tagline de impacto antes del título */
-.hero-impact-line {
-  font-family: var(--font-mono);
-  font-size: clamp(9px,2.5vw,11px);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--amber);
-  background: var(--amber-glow);
-  border: 1px solid rgba(184,134,11,0.3);
-  padding: 6px 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
-  width: fit-content;
-}
+.hero-impact-line { font-family: var(--font-mono); font-size: clamp(9px,2.5vw,11px); letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); background: var(--amber-glow); border: 1px solid rgba(184,134,11,0.3); padding: 6px 12px; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; width: fit-content; }
 .hero-impact-line::before { content: '●'; animation: pulse 1.5s infinite; font-size: 8px; }
-
 .hero-title { font-family: var(--font-display); font-size: clamp(44px,12vw,106px); font-weight: 900; line-height: 0.92; letter-spacing: -0.02em; color: var(--ink); margin-bottom: clamp(20px,4vw,32px); }
 .hero-title em { font-style: italic; color: var(--navy); }
 .hero-title .rule-text { display: block; }
 .hero-title-sub { display: block; font-size: 0.55em; font-weight: 400; color: var(--ink-light); font-style: normal; letter-spacing: 0.05em; }
-
-/* NUEVO: Propuesta de valor más directa */
-.hero-value-prop {
-  font-size: clamp(14px,3.5vw,17px);
-  line-height: 1.6;
-  color: var(--ink);
-  max-width: 500px;
-  margin-bottom: clamp(16px,3vw,24px);
-  font-weight: 600;
-}
+.hero-value-prop { font-size: clamp(14px,3.5vw,17px); line-height: 1.6; color: var(--ink); max-width: 500px; margin-bottom: clamp(16px,3vw,24px); font-weight: 600; }
 .hero-value-prop span { color: var(--navy); }
-
 .hero-descriptor { font-size: clamp(13px,3vw,15px); line-height: 1.75; color: var(--ink-mid); max-width: 480px; margin-bottom: clamp(20px,4vw,32px); font-weight: 300; }
-
 .hero-credentials { display: flex; gap: 0; margin-bottom: clamp(28px,5vw,48px); border: 1px solid var(--rule); overflow: hidden; }
-.credential-cell { flex: 1; padding: clamp(12px,3vw,16px) clamp(12px,3vw,20px); border-right: 1px solid var(--rule); position: relative; }
+.credential-cell { flex: 1; padding: clamp(12px,3vw,16px) clamp(12px,3vw,20px); border-right: 1px solid var(--rule); }
 .credential-cell:last-child { border-right: none; }
 .credential-num { font-family: var(--font-display); font-size: clamp(20px,5vw,28px); font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 4px; }
 .credential-label { font-family: var(--font-mono); font-size: clamp(7px,1.8vw,8.5px); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); }
-
-/* NUEVO: CTA doble más agresivo */
 .hero-actions { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
 .hero-actions-main { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .hero-urgency-note { font-family: var(--font-mono); font-size: clamp(8px,2vw,9px); letter-spacing: 0.1em; color: var(--ink-light); display: flex; align-items: center; gap: 6px; }
 .hero-urgency-note::before { content: '✓'; color: var(--success); }
 
-.hero-image-panel { position: relative; background: var(--ink); aspect-ratio: 4/3; overflow: hidden; cursor: pointer; margin: 0 calc(-1 * var(--pad-x)); }
+/* ─── SCROLL-DRIVEN ASSEMBLY DIAGRAM ─── */
+.hero-image-panel { position: relative; background: var(--ink); aspect-ratio: 4/3; overflow: hidden; }
 .hero-image-placeholder { position: absolute; inset: 0; background: linear-gradient(135deg, #1B2D4F 0%, #0D1B30 40%, #111820 100%); display: flex; align-items: center; justify-content: center; transition: opacity 0.4s; }
 .hero-image-placeholder::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; }
 #hero-bg-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; display: none; background: var(--ink); }
 .hero-image-caption { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(27,45,79,0.9); padding: clamp(10px,2.5vw,16px) clamp(12px,3vw,24px); display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.08); gap: 8px; flex-wrap: wrap; }
 .hero-image-caption-text { font-family: var(--font-mono); font-size: clamp(7px,1.8vw,9px); color: rgba(255,255,255,0.6); letter-spacing: 0.18em; text-transform: uppercase; }
-.hero-image-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; position: relative; z-index: 1; }
-.precision-diagram { width: clamp(120px,30vw,220px); height: clamp(120px,30vw,220px); position: relative; }
-.precision-diagram svg { width: 100%; height: 100%; }
-.hero-iso-seal { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.iso-seal-main { font-family: var(--font-display); font-size: clamp(10px,2.5vw,13px); font-weight: 700; color: rgba(255,255,255,0.9); letter-spacing: 0.08em; text-align: center; }
-.iso-seal-sub { font-family: var(--font-mono); font-size: clamp(7px,2vw,9px); color: var(--amber-light); letter-spacing: 0.18em; text-transform: uppercase; }
 
-/* NUEVO: Spec bar con micro-conversión */
+/* SVG Assembly animation */
+#assembly-svg { width: 100%; height: 100%; position: absolute; inset: 0; }
+.assembly-path {
+  stroke-dasharray: var(--path-len, 1000);
+  stroke-dashoffset: var(--path-len, 1000);
+  transition: stroke-dashoffset 0.6s ease;
+}
+.assembly-path.drawn { stroke-dashoffset: 0; }
+
 .hero-footer-bar { border-top: 1px solid var(--rule); background: var(--paper); padding: 0 var(--pad-x); max-width: 1320px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
 .hero-spec-item { display: flex; align-items: center; gap: clamp(8px,2vw,14px); padding: clamp(12px,3vw,20px) clamp(12px,3vw,24px); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background 0.15s; cursor: pointer; text-decoration: none; }
 .hero-spec-item:hover { background: rgba(27,45,79,0.04); }
@@ -356,16 +279,10 @@ body.admin-mode #inicio { padding-top: calc(var(--nav-h) + var(--toolbar-h)); }
 .btn-secondary { font-family: var(--font-mono); font-size: clamp(9px,2.5vw,10px); letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy); background: transparent; border: 1px solid var(--rule); padding: clamp(12px,3vw,14px) clamp(20px,4vw,32px); cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-flex; align-items: center; min-height: 48px; }
 .btn-secondary:hover { border-color: var(--navy); background: rgba(27,45,79,0.04); }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   SOCIAL PROOF BAND — NUEVO
-═══════════════════════════════════════════════════════════════════════ */
-#social-proof {
-  background: var(--navy);
-  padding: clamp(32px,6vw,56px) 0;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
+/* ═══════════════════════════════════════════════════════════════════
+   SOCIAL PROOF BAND
+═══════════════════════════════════════════════════════════════════ */
+#social-proof { background: var(--navy); padding: clamp(32px,6vw,56px) 0; position: relative; z-index: 1; overflow: hidden; }
 #social-proof::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
 .proof-inner { max-width: 1320px; margin: 0 auto; padding: 0 var(--pad-x); }
 .proof-label { font-family: var(--font-mono); font-size: clamp(8px,2vw,9px); letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
@@ -377,9 +294,9 @@ body.admin-mode #inicio { padding-top: calc(var(--nav-h) + var(--toolbar-h)); }
 .proof-stat-label { font-family: var(--font-mono); font-size: clamp(8px,2vw,10px); letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
 .proof-stat-sub { font-size: clamp(11px,2.5vw,12px); color: rgba(255,255,255,0.25); font-weight: 300; margin-top: 4px; }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    SECTION COMMONS
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 section { position: relative; z-index: 1; }
 .section-masthead { display: grid; grid-template-columns: auto 1fr; gap: clamp(16px,4vw,40px); align-items: start; margin-bottom: clamp(40px,7vw,64px); padding-bottom: clamp(20px,4vw,32px); border-bottom: 1px solid var(--rule); }
 .section-num { font-family: var(--font-display); font-size: clamp(48px,10vw,80px); font-weight: 900; color: var(--rule); line-height: 1; letter-spacing: -0.04em; user-select: none; flex-shrink: 0; }
@@ -387,9 +304,9 @@ section { position: relative; z-index: 1; }
 .section-heading em { font-style: italic; color: var(--navy); }
 .section-sub { font-size: clamp(13px,3vw,14px); line-height: 1.75; color: var(--ink-mid); max-width: 500px; font-weight: 300; }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   SERVICIOS — v3: Resultados, no procesos
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   SERVICIOS
+═══════════════════════════════════════════════════════════════════ */
 #servicios { padding: clamp(48px,8vw,120px) 0; background: var(--parchment); }
 .services-mobile-tabs { display: flex; overflow-x: auto; gap: 0; border: 1px solid var(--rule); margin-bottom: 1px; scrollbar-width: none; }
 .services-mobile-tabs::-webkit-scrollbar { display: none; }
@@ -416,20 +333,9 @@ section { position: relative; z-index: 1; }
 .panel-title { font-family: var(--font-display); font-size: clamp(24px,6vw,36px); font-weight: 700; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; }
 .panel-title em { font-style: italic; color: var(--navy); }
 .panel-badge { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy); border: 1px solid var(--navy); padding: 5px 10px; white-space: nowrap; flex-shrink: 0; }
-
-/* NUEVO: Resultado destacado del servicio */
-.panel-result-highlight {
-  background: var(--amber-glow);
-  border: 1px solid rgba(184,134,11,0.25);
-  border-left: 3px solid var(--amber);
-  padding: clamp(12px,3vw,16px) clamp(14px,3vw,20px);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+.panel-result-highlight { background: var(--amber-glow); border: 1px solid rgba(184,134,11,0.25); border-left: 3px solid var(--amber); padding: clamp(12px,3vw,16px) clamp(14px,3vw,20px); display: flex; align-items: center; gap: 12px; }
 .panel-result-icon { font-size: 16px; color: var(--amber); flex-shrink: 0; }
 .panel-result-text { font-family: var(--font-mono); font-size: clamp(10px,2.5vw,12px); letter-spacing: 0.08em; color: var(--navy); font-weight: 500; }
-
 .panel-description { font-size: clamp(13px,3vw,15px); line-height: 1.75; color: var(--ink-mid); font-weight: 300; }
 .panel-specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
 .spec-cell { background: var(--parchment); padding: clamp(12px,3vw,16px) clamp(14px,3vw,20px); }
@@ -437,13 +343,12 @@ section { position: relative; z-index: 1; }
 .spec-cell-value { font-family: var(--font-mono); font-size: clamp(11px,3vw,13px); color: var(--navy); font-weight: 500; }
 .panel-materials { display: flex; gap: 6px; flex-wrap: wrap; }
 .material-tag { font-family: var(--font-mono); font-size: clamp(9px,2.5vw,10px); letter-spacing: 0.1em; color: var(--ink-mid); border: 1px solid var(--rule); padding: 5px 10px; background: var(--parchment); }
-/* NUEVO: CTA dentro del panel */
 .panel-cta-row { display: flex; align-items: center; gap: 12px; padding-top: 8px; border-top: 1px solid var(--rule); flex-wrap: wrap; }
 .panel-cta-note { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; color: var(--ink-light); }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   ARQUITECTÓNICO
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   ARQUITECTÓNICO — Scroll-Driven Pergola
+═══════════════════════════════════════════════════════════════════ */
 #arquitectonico { padding: clamp(48px,8vw,120px) 0; background: var(--ink); color: var(--paper); position: relative; overflow: hidden; }
 #arquitectonico::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 60px 60px; }
 .arch-inner { display: grid; grid-template-columns: 1fr; gap: clamp(40px,7vw,60px); align-items: start; }
@@ -458,57 +363,94 @@ section { position: relative; z-index: 1; }
 .arch-product-name { font-family: var(--font-display); font-size: clamp(16px,4vw,20px); font-weight: 700; color: white; margin-bottom: 6px; }
 .arch-product-desc { font-size: clamp(12px,2.5vw,13px); color: rgba(255,255,255,0.45); line-height: 1.6; }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   UMKA
-═══════════════════════════════════════════════════════════════════════ */
-#umka { padding: clamp(48px,8vw,120px) 0; background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.umka-layout { display: grid; grid-template-columns: 1fr; gap: clamp(40px,7vw,80px); align-items: start; }
-.umka-logotype { display: block; font-family: var(--font-display); font-size: clamp(48px,14vw,72px); font-weight: 900; color: var(--ink); letter-spacing: -0.05em; line-height: 1; margin-bottom: 4px; }
-.umka-logotype-rule { display: block; font-family: var(--font-mono); font-size: clamp(7px,2vw,9px); letter-spacing: 0.28em; color: var(--ink-light); text-transform: uppercase; margin-bottom: clamp(16px,4vw,24px); }
-.umka-brand-desc { font-size: clamp(13px,3vw,14px); line-height: 1.75; color: var(--ink-mid); font-weight: 300; margin-bottom: clamp(20px,4vw,32px); }
-.umka-grid { display: grid; grid-template-columns: 1fr; gap: 0; border: 1px solid var(--rule); }
-.umka-item { padding: clamp(20px,4vw,32px) clamp(16px,4vw,28px); border-bottom: 1px solid var(--rule); transition: background 0.2s; position: relative; }
-.umka-item:last-child { border-bottom: none; }
-.umka-item:hover { background: rgba(27,45,79,0.03); }
-.umka-item-code { font-family: var(--font-mono); font-size: clamp(7px,2vw,8px); letter-spacing: 0.18em; color: var(--amber); margin-bottom: 12px; text-transform: uppercase; }
-.umka-item-name { font-family: var(--font-display); font-size: clamp(18px,4.5vw,22px); font-weight: 700; color: var(--ink); margin-bottom: 6px; }
-.umka-item-desc { font-size: clamp(12px,2.5vw,13px); color: var(--ink-light); line-height: 1.6; }
-
-/* ═══════════════════════════════════════════════════════════════════════
-   PROYECTOS — NUEVO: Prueba social con placeholders
-═══════════════════════════════════════════════════════════════════════ */
-#proyectos {
-  padding: clamp(48px,8vw,120px) 0;
-  background: var(--parchment);
-  border-top: 1px solid var(--rule);
+/* Scroll-Driven Pergola SVG */
+#pergola-svg-wrap { position: relative; }
+.pergola-draw-path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  will-change: stroke-dashoffset;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
+.pergola-draw-path.drawn { stroke-dashoffset: 0; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   PROYECTOS v4 — Sistema dinámico completo
+═══════════════════════════════════════════════════════════════════ */
+#proyectos { padding: clamp(48px,8vw,120px) 0; background: var(--parchment); border-top: 1px solid var(--rule); }
+
+/* Filter buttons */
+.proyectos-filters {
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  border: 1px solid var(--rule);
+  margin-bottom: clamp(24px,5vw,40px);
+  overflow: hidden;
+}
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: clamp(8px,2.5vw,10px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--paper);
+  color: var(--ink-light);
+  border: none;
+  border-right: 1px solid var(--rule);
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  min-height: 46px;
+  position: relative;
+}
+.filter-btn:last-child { border-right: none; }
+.filter-btn:hover { background: rgba(27,45,79,0.04); color: var(--navy); }
+.filter-btn.active {
+  background: var(--navy);
+  color: var(--amber-light);
+  border-right-color: var(--navy);
+}
+.filter-btn.active::before {
+  content: '●';
+  margin-right: 6px;
+  font-size: 7px;
+  color: var(--amber);
+}
+.filter-count {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  padding: 1px 5px;
+  margin-left: 6px;
+}
+.filter-btn:not(.active) .filter-count { background: var(--rule); color: var(--ink-light); }
+
 .proyectos-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1px;
   background: var(--rule);
   border: 1px solid var(--rule);
-  margin-top: clamp(32px,6vw,56px);
 }
 .proyecto-card {
   background: var(--paper);
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, opacity 0.3s, transform 0.3s;
 }
 .proyecto-card:hover { background: white; }
+.proyecto-card.hidden { display: none; }
 .proyecto-card-img {
   width: 100%;
   aspect-ratio: 16/9;
   background: linear-gradient(135deg, #1B2D4F 0%, #0D1B30 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
 }
-.proyecto-card-img::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 30px 30px; }
+.proyecto-card-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.proyecto-card-img::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 30px 30px; z-index: 1; }
 .proyecto-placeholder-icon { font-family: var(--font-display); font-size: 48px; color: rgba(255,255,255,0.06); position: relative; z-index: 1; }
 .proyecto-category-badge { position: absolute; top: 12px; left: 12px; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--amber); background: rgba(27,45,79,0.9); padding: 4px 10px; border: 1px solid rgba(184,134,11,0.3); z-index: 2; }
 .proyecto-card-body { padding: clamp(16px,4vw,24px); }
@@ -518,9 +460,108 @@ section { position: relative; z-index: 1; }
 .proyecto-specs { display: flex; gap: 6px; flex-wrap: wrap; }
 .proyecto-spec-tag { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; color: var(--navy); border: 1px solid var(--rule); padding: 3px 8px; background: var(--parchment); }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* Admin controls on project card */
+.proyecto-admin-bar {
+  display: none;
+  padding: 8px 12px;
+  background: rgba(27,45,79,0.96);
+  border-top: 1px solid rgba(184,134,11,0.3);
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body.admin-mode .proyecto-admin-bar { display: flex; }
+.proy-edit-btn, .proy-del-btn {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-height: 30px;
+}
+.proy-edit-btn:hover { border-color: var(--amber); color: var(--amber); }
+.proy-del-btn:hover { border-color: var(--danger); color: var(--danger); }
+.proy-img-btn { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid rgba(184,134,11,0.4); background: rgba(184,134,11,0.1); color: var(--amber); padding: 5px 12px; cursor: pointer; transition: all 0.15s; min-height: 30px; }
+.proy-img-btn:hover { background: rgba(184,134,11,0.25); }
+
+/* ─── NEW PROJECT MODAL ─── */
+#proyecto-modal {
+  display: none;
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(26,28,30,0.94);
+  backdrop-filter: blur(10px);
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--pad-x);
+  overflow-y: auto;
+}
+#proyecto-modal.open { display: flex; }
+.proy-modal-panel {
+  background: var(--paper);
+  border: 1px solid var(--amber);
+  width: 680px;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+}
+.proy-modal-header {
+  background: var(--navy);
+  padding: clamp(14px,3vw,20px) clamp(16px,4vw,28px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--amber);
+  gap: 12px;
+}
+.proy-modal-title { font-family: var(--font-mono); font-size: clamp(9px,2.5vw,10px); letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); }
+.proy-modal-close { background: none; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.5); font-size: 12px; width: 32px; height: 32px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); transition: all 0.15s; flex-shrink: 0; }
+.proy-modal-close:hover { border-color: var(--amber); color: var(--amber); }
+.proy-modal-body { padding: clamp(20px,5vw,32px) clamp(16px,4vw,28px); display: flex; flex-direction: column; gap: 14px; }
+.proy-field { display: flex; flex-direction: column; gap: 6px; }
+.proy-field label { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light); }
+.proy-field input, .proy-field select, .proy-field textarea {
+  background: var(--parchment); border: 1px solid var(--rule); color: var(--ink);
+  font-family: var(--font-mono); font-size: clamp(12px,3vw,13px);
+  padding: 11px 14px; outline: none; width: 100%; appearance: none;
+  border-radius: 0; min-height: 46px; transition: border-color 0.15s;
+}
+.proy-field input:focus, .proy-field select:focus, .proy-field textarea:focus { border-color: var(--navy-light); background: white; }
+.proy-field textarea { min-height: 80px; resize: vertical; }
+.proy-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.proy-image-upload-area {
+  border: 1px dashed var(--rule); padding: 24px; text-align: center; cursor: pointer;
+  transition: all 0.2s; background: var(--parchment); position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.proy-image-upload-area:hover { border-color: var(--navy-light); background: rgba(27,45,79,0.04); }
+.proy-image-upload-area input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+.proy-upload-hint { font-family: var(--font-mono); font-size: clamp(9px,2.5vw,10px); color: var(--ink-light); letter-spacing: 0.1em; pointer-events: none; }
+.proy-upload-preview { width: 100%; max-height: 160px; object-fit: cover; display: none; border: 1px solid var(--rule); }
+.proy-tags-input { display: flex; flex-direction: column; gap: 8px; }
+.proy-tags-row { display: flex; gap: 6px; flex-wrap: wrap; min-height: 32px; align-items: center; border: 1px solid var(--rule); padding: 6px 10px; background: var(--parchment); }
+.proy-tag-pill { font-family: var(--font-mono); font-size: 9px; background: var(--navy); color: white; padding: 3px 8px; display: flex; align-items: center; gap: 4px; }
+.proy-tag-remove { cursor: pointer; color: rgba(255,255,255,0.5); transition: color 0.1s; line-height: 1; background: none; border: none; font-size: 11px; }
+.proy-tag-remove:hover { color: white; }
+.proy-tag-add-row { display: flex; gap: 6px; }
+.proy-tag-input { flex: 1; background: var(--parchment); border: 1px solid var(--rule); padding: 8px 12px; font-family: var(--font-mono); font-size: 12px; color: var(--ink); outline: none; border-radius: 0; }
+.proy-tag-add-btn { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--navy); color: white; border: none; padding: 8px 16px; cursor: pointer; white-space: nowrap; }
+.proy-modal-footer { padding: clamp(14px,3vw,20px) clamp(16px,4vw,28px); border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.proy-save-btn { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; background: var(--navy); color: white; border: none; padding: 14px 28px; cursor: pointer; transition: background 0.2s; min-height: 48px; }
+.proy-save-btn:hover { background: var(--amber); }
+.proy-save-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.proy-cancel-btn { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; color: var(--ink-light); border: 1px solid var(--rule); padding: 13px 20px; cursor: pointer; transition: all 0.15s; min-height: 48px; }
+.proy-cancel-btn:hover { border-color: var(--navy); color: var(--navy); }
+.proy-modal-error { font-family: var(--font-mono); font-size: 9px; color: var(--danger); letter-spacing: 0.1em; display: none; }
+.proy-modal-error.show { display: block; }
+
+/* ═══════════════════════════════════════════════════════════════════
    DIRECTOR
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 #director { padding: clamp(48px,8vw,120px) 0; background: var(--parchment); border-top: 1px solid var(--rule); }
 .director-layout { display: grid; grid-template-columns: 1fr; gap: clamp(32px,6vw,80px); align-items: start; }
 .director-portrait { position: relative; background: var(--ink); overflow: hidden; cursor: pointer; min-height: clamp(260px,60vw,420px); }
@@ -547,9 +588,9 @@ section { position: relative; z-index: 1; }
 .iso-cred-text h4 { font-family: var(--font-body); font-size: clamp(13px,3vw,15px); font-weight: 600; color: var(--ink); margin-bottom: 4px; }
 .iso-cred-text p { font-size: clamp(12px,2.5vw,13px); color: var(--ink-light); line-height: 1.6; font-weight: 300; }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    HISTORIA
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 #historia { padding: clamp(48px,8vw,120px) 0; background: var(--navy); color: white; overflow: hidden; position: relative; }
 #historia::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
 .historia-heading { font-family: var(--font-display); font-size: clamp(28px,8vw,64px); font-weight: 900; color: white; line-height: 1; letter-spacing: -0.02em; margin-bottom: 8px; }
@@ -557,15 +598,15 @@ section { position: relative; z-index: 1; }
 .timeline-track { display: grid; grid-template-columns: 1fr; gap: 0; margin-top: clamp(32px,6vw,56px); position: relative; }
 .timeline-node { padding: clamp(20px,4vw,28px) 0; padding-left: clamp(20px,5vw,32px); border-bottom: 1px solid rgba(255,255,255,0.07); border-left: 1px solid rgba(255,255,255,0.07); position: relative; }
 .timeline-node:last-child { border-bottom: none; }
-.timeline-marker { width: 16px; height: 16px; border: 2px solid var(--amber); background: var(--navy); position: absolute; left: -8px; top: clamp(22px,5vw,30px); flex-shrink: 0; }
+.timeline-marker { width: 16px; height: 16px; border: 2px solid var(--amber); background: var(--navy); position: absolute; left: -8px; top: clamp(22px,5vw,30px); }
 .timeline-marker::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 5px; height: 5px; background: var(--amber); }
 .timeline-year { font-family: var(--font-display); font-size: clamp(20px,5vw,28px); font-weight: 900; color: rgba(255,255,255,0.12); letter-spacing: -0.03em; margin-bottom: 8px; line-height: 1; }
 .timeline-event { font-family: var(--font-body); font-size: clamp(14px,3.5vw,15px); font-weight: 600; color: white; margin-bottom: 6px; line-height: 1.3; }
 .timeline-detail { font-size: clamp(12px,3vw,13px); color: rgba(255,255,255,0.45); line-height: 1.65; font-weight: 300; }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   CONTACTO — v3: Formulario optimizado para conversión + Firebase
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   CONTACTO
+═══════════════════════════════════════════════════════════════════ */
 #contacto { padding: clamp(48px,8vw,120px) 0; background: var(--parchment); border-top: 1px solid var(--rule); }
 .contact-layout { display: grid; grid-template-columns: 1fr; gap: clamp(32px,6vw,80px); align-items: start; }
 .contact-heading { font-family: var(--font-display); font-size: clamp(22px,6vw,48px); font-weight: 700; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 12px; }
@@ -580,19 +621,10 @@ section { position: relative; z-index: 1; }
 .formats-label { font-family: var(--font-mono); font-size: clamp(7px,2vw,8.5px); letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
 .format-chips { display: flex; gap: 5px; flex-wrap: wrap; }
 .format-chip { font-family: var(--font-mono); font-size: clamp(9px,2.5vw,10px); color: var(--ink-mid); border: 1px solid var(--rule); padding: 4px 9px; background: var(--parchment); }
-
-/* NUEVO: Garantía de respuesta */
-.response-guarantee {
-  background: var(--navy);
-  padding: clamp(16px,4vw,20px);
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+.response-guarantee { background: var(--navy); padding: clamp(16px,4vw,20px); display: flex; align-items: center; gap: 16px; }
 .guarantee-icon { font-size: 24px; flex-shrink: 0; }
 .guarantee-text strong { display: block; font-family: var(--font-mono); font-size: clamp(9px,2.5vw,11px); letter-spacing: 0.12em; color: var(--amber-light); text-transform: uppercase; margin-bottom: 4px; }
 .guarantee-text p { font-size: clamp(12px,2.5vw,13px); color: rgba(255,255,255,0.55); font-weight: 300; }
-
 .quote-form-container { background: var(--paper); border: 1px solid var(--rule); position: relative; }
 .form-title-block { display: grid; grid-template-columns: 1fr auto; gap: 0; border-bottom: 1px solid var(--rule); }
 .form-title-main { padding: clamp(14px,3vw,20px) clamp(16px,4vw,28px); border-right: 1px solid var(--rule); }
@@ -617,10 +649,7 @@ textarea { min-height: 88px; resize: vertical; }
 .form-disclaimer { font-family: var(--font-mono); font-size: clamp(8px,2vw,9px); color: var(--ink-light); letter-spacing: 0.08em; line-height: 1.6; }
 .btn-submit { font-family: var(--font-mono); font-size: clamp(9px,2.5vw,10px); letter-spacing: 0.18em; text-transform: uppercase; color: white; background: var(--navy); border: none; padding: clamp(14px,3.5vw,16px) clamp(20px,5vw,28px); cursor: pointer; transition: all 0.2s; white-space: nowrap; font-weight: 500; min-height: 52px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .btn-submit:hover { background: var(--amber); }
-.btn-submit:active { transform: scale(0.99); }
 .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-
-/* NUEVO: Estado de envío del formulario */
 #form-success { display: none; padding: 32px; text-align: center; }
 #form-success.show { display: block; }
 .form-success-icon { font-size: 40px; margin-bottom: 16px; }
@@ -629,28 +658,17 @@ textarea { min-height: 88px; resize: vertical; }
 #form-error-msg { font-family: var(--font-mono); font-size: 10px; color: var(--danger); letter-spacing: 0.1em; display: none; margin-top: 8px; }
 #form-error-msg.show { display: block; }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   LEADS COUNTER BADGE — Admin only
-═══════════════════════════════════════════════════════════════════════ */
-#leads-badge {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background: var(--navy);
-  border: 1px solid var(--amber);
-  padding: 12px 16px;
-  z-index: 190;
-  cursor: pointer;
-  text-align: center;
-}
+/* ═══════════════════════════════════════════════════════════════════
+   LEADS BADGE (admin only)
+═══════════════════════════════════════════════════════════════════ */
+#leads-badge { display: none; position: fixed; bottom: 80px; right: 20px; background: var(--navy); border: 1px solid var(--amber); padding: 12px 16px; z-index: 190; cursor: pointer; text-align: center; }
 #leads-badge.visible { display: block; }
 .leads-badge-num { font-family: var(--font-display); font-size: 24px; font-weight: 900; color: var(--amber); line-height: 1; }
 .leads-badge-label { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-top: 2px; }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    FOOTER
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 footer { background: var(--ink); border-top: 4px solid var(--navy); position: relative; z-index: 1; }
 .footer-grid { display: grid; grid-template-columns: 1fr; border-bottom: 1px solid rgba(255,255,255,0.06); }
 .footer-col { padding: clamp(28px,6vw,48px) var(--pad-x); border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -673,9 +691,9 @@ footer { background: var(--ink); border-top: 4px solid var(--navy); position: re
 #admin-trigger { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.12em; color: rgba(255,255,255,0.08); background: transparent; border: none; cursor: pointer; padding: 4px 8px; transition: color 0.3s; min-height: 44px; }
 #admin-trigger:hover { color: var(--amber); }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    LOGIN MODAL
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 #login-modal { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(26,28,30,0.92); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: var(--pad-x); }
 #login-modal.open { display: flex; }
 .login-panel { background: var(--paper); border: 1px solid var(--amber); width: 380px; max-width: 100%; position: relative; }
@@ -695,24 +713,22 @@ footer { background: var(--ink); border-top: 4px solid var(--navy); position: re
 .login-doc-ref { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.12em; color: var(--ink-light); text-align: center; margin-top: 14px; }
 
 /* ─── IMAGE UPLOAD OVERLAY ─── */
-.image-upload-overlay { display: none; position: absolute; inset: 0; background: rgba(27,45,79,0.82); align-items: center; justify-content: center; z-index: 10; cursor: pointer; transition: opacity 0.2s; }
+.image-upload-overlay { display: none; position: absolute; inset: 0; background: rgba(27,45,79,0.82); align-items: center; justify-content: center; z-index: 10; cursor: pointer; }
 body.admin-mode .image-upload-overlay { display: flex; }
 .image-upload-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); text-align: center; pointer-events: none; }
 .image-upload-label::before { content: '↑'; display: block; font-size: 22px; margin-bottom: 6px; }
 .image-upload-input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
 
 /* ─── EDITABLE FIELDS ─── */
-body.admin-mode [data-field] { outline: 1px dashed rgba(184,134,11,0.3); cursor: text; position: relative; transition: outline 0.15s; }
+body.admin-mode [data-field] { outline: 1px dashed rgba(184,134,11,0.3); cursor: text; transition: outline 0.15s; }
 body.admin-mode [data-field]:hover { outline: 1px solid rgba(184,134,11,0.7); background: rgba(184,134,11,0.04); }
 body.admin-mode [data-field]:focus { outline: 2px solid var(--amber); background: rgba(184,134,11,0.06); }
 
 /* ─── ADMIN ITEM CONTROLS ─── */
 .admin-item-controls { display: none; position: absolute; top: 8px; right: 8px; gap: 4px; }
 body.admin-mode .admin-item-controls { display: flex; }
-.admin-remove-btn, .admin-add-btn { font-family: var(--font-mono); font-size: 10px; font-weight: 600; border: 1px solid var(--amber); background: rgba(27,45,79,0.9); color: var(--amber); width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; line-height: 1; }
+.admin-remove-btn { font-family: var(--font-mono); font-size: 10px; font-weight: 600; border: 1px solid var(--amber); background: rgba(27,45,79,0.9); color: var(--amber); width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; line-height: 1; }
 .admin-remove-btn:hover { background: var(--danger); border-color: var(--danger); color: white; }
-.admin-add-btn { color: var(--success); border-color: var(--success); }
-.admin-add-btn:hover { background: var(--success); color: white; }
 
 /* ─── LOADING ─── */
 #app-loading { position: fixed; inset: 0; z-index: 10000; background: var(--parchment); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; transition: opacity 0.5s ease; }
@@ -723,7 +739,7 @@ body.admin-mode .admin-item-controls { display: flex; }
 @keyframes loadbar { 0% { width: 0; } 60% { width: 100%; } 100% { width: 100%; opacity: 0; } }
 .loading-text { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.18em; color: var(--ink-light); text-transform: uppercase; }
 
-/* ─── REVEAL ANIMATIONS ─── */
+/* ─── REVEAL ─── */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-stagger > * { opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease; }
@@ -737,9 +753,9 @@ body.admin-mode .admin-item-controls { display: flex; }
 .rotate-ccw { animation: rotateSlowCCW 30s linear infinite; transform-origin: center; }
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    RESPONSIVE
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 @media (min-width: 640px) {
   :root { --nav-h: 64px; }
   .hero-footer-bar { grid-template-columns: repeat(4, 1fr); }
@@ -751,8 +767,6 @@ body.admin-mode .admin-item-controls { display: flex; }
   .form-footer { grid-template-columns: 1fr auto; }
   .btn-submit { width: auto; }
   .arch-products { grid-template-columns: 1fr 1fr; }
-  .umka-grid { grid-template-columns: 1fr 1fr; }
-  .umka-item:nth-child(odd) { border-right: 1px solid var(--rule); }
   .timeline-track { grid-template-columns: 1fr 1fr; }
   .panel-specs-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -761,6 +775,7 @@ body.admin-mode .admin-item-controls { display: flex; }
   .footer-col:nth-child(3) { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.06); border-right: none; }
   .proof-stats { grid-template-columns: repeat(4, 1fr); }
   .proyectos-grid { grid-template-columns: 1fr 1fr; }
+  .proy-field-row { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 768px) {
   .timeline-track { grid-template-columns: repeat(4, 1fr); }
@@ -769,8 +784,6 @@ body.admin-mode .admin-item-controls { display: flex; }
   .timeline-marker { position: relative; left: auto; top: auto; margin-bottom: 20px; }
   .director-layout { grid-template-columns: 300px 1fr; }
   .contact-layout { grid-template-columns: 1fr 1.4fr; }
-  .umka-layout { grid-template-columns: 280px 1fr; }
-  .umka-brand-block { position: sticky; top: 96px; }
 }
 @media (min-width: 1024px) {
   :root { --nav-h: 68px; }
@@ -782,7 +795,6 @@ body.admin-mode .admin-item-controls { display: flex; }
   .hero-body { grid-template-columns: 1fr 1fr; }
   .hero-content { padding: clamp(40px,6vw,60px) clamp(40px,5vw,60px) clamp(40px,6vw,60px) 0; border-right: 1px solid var(--rule); }
   .hero-image-panel { margin: 0; aspect-ratio: unset; min-height: 100%; }
-  #hero-bg-img { object-fit: contain; position: absolute; }
   .hero-footer-bar { display: flex; }
   .hero-spec-item { flex: 1; border-right: 1px solid var(--rule); border-bottom: none; }
   .services-mobile-tabs { display: none; }
@@ -790,8 +802,6 @@ body.admin-mode .admin-item-controls { display: flex; }
   .services-sidebar { display: block; }
   .arch-inner { grid-template-columns: 1fr 1fr; }
   .arch-products { grid-template-columns: 1fr 1fr; }
-  .umka-layout { grid-template-columns: 360px 1fr; gap: 80px; }
-  .umka-grid { grid-template-columns: 1fr 1fr; }
   .director-layout { grid-template-columns: 380px 1fr; }
   .director-portrait { min-height: 460px; }
   .timeline-track { grid-template-columns: repeat(4, 1fr); }
@@ -806,9 +816,8 @@ body.admin-mode .admin-item-controls { display: flex; }
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal-stagger > * { transition: none; }
   .rotate-cw, .rotate-ccw { animation: none; }
-  #save-status-wrap.state-saving { animation: none; }
   .urgency-dot { animation: none; }
-  .toolbar-mode-badge::before { animation: none; }
+  .pergola-draw-path, .assembly-path { transition: none; stroke-dashoffset: 0; }
 }
 @supports (padding: max(0px)) {
   body { padding-bottom: env(safe-area-inset-bottom); }
@@ -822,7 +831,7 @@ body.admin-mode .admin-item-controls { display: flex; }
 <div id="app-loading">
   <div class="loading-logo">RID<em style="font-style:italic;color:var(--navy)"> INDUSTRIAS</em></div>
   <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
-  <div class="loading-text">Conectando con base de datos...</div>
+  <div class="loading-text">Inicializando plataforma v4.0...</div>
 </div>
 
 <!-- ═══ LOGIN MODAL ═══ -->
@@ -848,10 +857,80 @@ body.admin-mode .admin-item-controls { display: flex; }
   </div>
 </div>
 
+<!-- ═══ PROYECTO MODAL ═══ -->
+<div id="proyecto-modal" role="dialog" aria-modal="true" aria-label="Gestión de proyecto">
+  <div class="proy-modal-panel">
+    <div class="proy-modal-header">
+      <span class="proy-modal-title" id="proy-modal-title-text">◈ Nuevo Proyecto</span>
+      <button class="proy-modal-close" onclick="closeProyectoModal()" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="proy-modal-body">
+      <input type="hidden" id="proy-edit-id" value="">
+      <div class="proy-field-row">
+        <div class="proy-field">
+          <label for="proy-code">Código de Proyecto</label>
+          <input type="text" id="proy-code" placeholder="PRY-001">
+        </div>
+        <div class="proy-field">
+          <label for="proy-categoria">Categoría *</label>
+          <select id="proy-categoria">
+            <option value="" disabled selected>— Seleccionar —</option>
+            <option value="Industrial">Industrial</option>
+            <option value="Arquitectónico">Arquitectónico</option>
+            <option value="Automotriz">Automotriz</option>
+            <option value="Especiales">Especiales</option>
+          </select>
+        </div>
+      </div>
+      <div class="proy-field">
+        <label for="proy-titulo">Título del Proyecto *</label>
+        <input type="text" id="proy-titulo" placeholder="Ej: Celosía paramétrica fachada comercial">
+      </div>
+      <div class="proy-field">
+        <label for="proy-desc">Descripción</label>
+        <textarea id="proy-desc" placeholder="Descripción técnica del proyecto, materiales, dimensiones, alcance..."></textarea>
+      </div>
+      <div class="proy-field-row">
+        <div class="proy-field">
+          <label for="proy-cliente">Cliente / Empresa</label>
+          <input type="text" id="proy-cliente" placeholder="(Opcional)">
+        </div>
+        <div class="proy-field">
+          <label for="proy-anio">Año</label>
+          <input type="text" id="proy-anio" placeholder="2024">
+        </div>
+      </div>
+      <!-- Tags -->
+      <div class="proy-field proy-tags-input">
+        <label>Etiquetas Técnicas</label>
+        <div class="proy-tags-row" id="proy-tags-display"></div>
+        <div class="proy-tag-add-row">
+          <input type="text" class="proy-tag-input" id="proy-tag-input" placeholder="Ej: Acero inox., CNC, ISO 9001" maxlength="30">
+          <button class="proy-tag-add-btn" type="button" onclick="addProyTag()">+ Agregar</button>
+        </div>
+      </div>
+      <!-- Image upload -->
+      <div class="proy-field">
+        <label>Imagen del Proyecto</label>
+        <div class="proy-image-upload-area" id="proy-upload-area">
+          <img class="proy-upload-preview" id="proy-upload-preview" alt="Vista previa">
+          <div class="proy-upload-hint" id="proy-upload-hint">↑ Arrastra imagen o haz clic · JPG, PNG, WebP</div>
+          <input type="file" id="proy-image-file" accept="image/*" onchange="handleProyImageSelect(this)">
+        </div>
+      </div>
+      <div class="proy-modal-error" id="proy-modal-error">Completa los campos requeridos (Categoría y Título).</div>
+    </div>
+    <div class="proy-modal-footer">
+      <button class="proy-cancel-btn" onclick="closeProyectoModal()">Cancelar</button>
+      <button class="proy-save-btn" id="proy-save-btn" onclick="saveProyecto()">Guardar Proyecto →</button>
+    </div>
+  </div>
+</div>
+
 <!-- ═══ ADMIN TOOLBAR ═══ -->
 <div id="admin-toolbar" role="toolbar" aria-label="Barra de administración">
   <div class="toolbar-left">
-    <span class="toolbar-mode-badge">Modo Editor</span>
+    <span class="toolbar-mode-badge">Modo Editor v4.0</span>
     <span class="toolbar-user" id="toolbar-user-email">—</span>
     <div id="save-status-wrap">
       <div class="save-status-dot"></div>
@@ -859,14 +938,15 @@ body.admin-mode .admin-item-controls { display: flex; }
     </div>
   </div>
   <div class="toolbar-right">
+    <button class="toolbar-btn primary" onclick="openProyectoModal(null)">+ Proyecto</button>
     <button class="toolbar-btn" onclick="reloadFromFirestore()">↺ Recargar</button>
-    <button class="toolbar-btn" onclick="showLeadsPanel()">📋 Ver Leads</button>
+    <button class="toolbar-btn" onclick="showLeadsPanel()">📋 Leads</button>
     <button class="toolbar-btn danger" onclick="doLogout()">Salir</button>
   </div>
 </div>
 <div id="unsaved-warning">⚠ Guardando cambios... No cierres esta pestaña hasta ver "✓ Guardado"</div>
 
-<!-- ═══ LEADS BADGE (admin only) ═══ -->
+<!-- ═══ LEADS BADGE ═══ -->
 <div id="leads-badge" onclick="showLeadsPanel()">
   <div class="leads-badge-num" id="leads-count">0</div>
   <div class="leads-badge-label">Leads</div>
@@ -890,7 +970,6 @@ body.admin-mode .admin-item-controls { display: flex; }
     <ul class="nav-links" role="list">
       <li><a href="#servicios">Industrial</a></li>
       <li><a href="#arquitectonico">Arquitectónico</a></li>
-      <li><a href="#umka">UMKA</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#director">Nosotros</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -909,7 +988,6 @@ body.admin-mode .admin-item-controls { display: flex; }
   <ul class="nav-drawer-links" role="list">
     <li><a href="#servicios">Manufactura Industrial</a></li>
     <li><a href="#arquitectonico">Soluciones Arquitectónicas</a></li>
-    <li><a href="#umka">Línea UMKA</a></li>
     <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#director">Nosotros</a></li>
     <li><a href="#contacto">Cotizar Proyecto</a></li>
@@ -921,7 +999,6 @@ body.admin-mode .admin-item-controls { display: flex; }
 
 <!-- ═══ HERO ═══ -->
 <section id="inicio" aria-label="Inicio">
-  <!-- Trust bar -->
   <div class="hero-trust-bar">
     <div class="hero-trust-inner">
       <div class="trust-item"><span class="trust-item-icon">✦</span><span class="trust-item-text"><strong>ISO 9001:2015</strong> Certificados</span></div>
@@ -947,7 +1024,7 @@ body.admin-mode .admin-item-controls { display: flex; }
     <div class="hero-content">
       <div class="anno" style="margin-bottom:16px;">
         <span class="anno-num">SECT. 01</span>
-        Centro de Manufactura de Precisión
+        Centro de Manufactura Integral de Precisión
       </div>
       <div class="hero-impact-line">Manufactura de alta exactitud disponible ahora</div>
       <h1 class="hero-title">
@@ -958,7 +1035,7 @@ body.admin-mode .admin-item-controls { display: flex; }
 
       <p class="hero-value-prop">
         Del vector al <span>metal cortado</span> con ±0.1mm de tolerancia.<br>
-        Sin intermediarios. Con ISO 9001:2015.
+        Manufactura Integral. ISO 9001:2015.
       </p>
 
       <p class="hero-descriptor" id="hero-descriptor" data-field="hero.descriptor" contenteditable="false"></p>
@@ -988,24 +1065,78 @@ body.admin-mode .admin-item-controls { display: flex; }
     </div>
 
     <div class="hero-image-panel" id="hero-image-panel">
-      <img id="hero-bg-img" alt="Planta RID Industrias MX">
+      <img id="hero-bg-img" alt="Planta RID Industrias MX — Ciudad Sahagún">
       <div class="hero-image-placeholder" id="hero-placeholder">
-        <div class="hero-image-inner">
-          <div class="precision-diagram">
-            <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="110" cy="110" r="100" stroke="rgba(184,134,11,0.2)" stroke-width="1"/>
-              <g class="rotate-cw"><line x1="110" y1="10" x2="110" y2="20" stroke="rgba(184,134,11,0.4)" stroke-width="1"/><line x1="110" y1="200" x2="110" y2="210" stroke="rgba(184,134,11,0.4)" stroke-width="1"/><line x1="10" y1="110" x2="20" y2="110" stroke="rgba(184,134,11,0.4)" stroke-width="1"/><line x1="200" y1="110" x2="210" y2="110" stroke="rgba(184,134,11,0.4)" stroke-width="1"/></g>
-              <g class="rotate-ccw"><circle cx="110" cy="110" r="78" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 8"/></g>
-              <g class="rotate-cw" style="transform-origin:110px 110px;animation-duration:60s;"><circle cx="110" cy="110" r="52" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/><circle cx="110" cy="110" r="44" fill="none" stroke="rgba(27,45,79,0.6)" stroke-width="8"/></g>
-              <line x1="110" y1="60" x2="110" y2="160" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><line x1="60" y1="110" x2="160" y2="110" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-              <circle cx="110" cy="110" r="4" fill="rgba(184,134,11,0.8)"/><circle cx="110" cy="110" r="2" fill="#D4A017"/>
-            </svg>
-          </div>
-          <div class="hero-iso-seal">
-            <div class="iso-seal-main">RID INDUSTRIAS MX</div>
-            <div class="iso-seal-sub">Est. 2005 · ISO 9001:2015</div>
-          </div>
-        </div>
+        <!-- SCROLL-DRIVEN ASSEMBLY SVG -->
+        <svg id="assembly-svg" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Grid de fondo -->
+          <defs>
+            <pattern id="grid-hero" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M0 0 L0 40 L40 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="480" height="480" fill="url(#grid-hero)"/>
+
+          <!-- Pieza 1: Círculo exterior (trayectoria principal) -->
+          <circle class="assembly-path" id="asm-1" cx="240" cy="240" r="180"
+            stroke="rgba(184,134,11,0.25)" stroke-width="1"
+            style="--path-len:1131"/>
+
+          <!-- Pieza 2: Marcas de eje N/S/E/W -->
+          <line class="assembly-path" id="asm-2" x1="240" y1="40" x2="240" y2="70"
+            stroke="rgba(184,134,11,0.5)" stroke-width="1.5" style="--path-len:30"/>
+          <line class="assembly-path" id="asm-3" x1="240" y1="410" x2="240" y2="440"
+            stroke="rgba(184,134,11,0.5)" stroke-width="1.5" style="--path-len:30"/>
+          <line class="assembly-path" id="asm-4" x1="40" y1="240" x2="70" y2="240"
+            stroke="rgba(184,134,11,0.5)" stroke-width="1.5" style="--path-len:30"/>
+          <line class="assembly-path" id="asm-5" x1="410" y1="240" x2="440" y2="240"
+            stroke="rgba(184,134,11,0.5)" stroke-width="1.5" style="--path-len:30"/>
+
+          <!-- Pieza 3: Anillo intermedio (CCW) -->
+          <circle class="assembly-path" id="asm-6" cx="240" cy="240" r="130"
+            stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="6 10"
+            style="--path-len:816"/>
+
+          <!-- Pieza 4: Estructura hexagonal central -->
+          <path class="assembly-path" id="asm-7"
+            d="M240 150 L303 187.5 L303 262.5 L240 300 L177 262.5 L177 187.5 Z"
+            stroke="rgba(255,255,255,0.15)" stroke-width="1.5"
+            style="--path-len:450"/>
+
+          <!-- Pieza 5: Cruz interior (ejes de precisión) -->
+          <line class="assembly-path" id="asm-8" x1="240" y1="150" x2="240" y2="330"
+            stroke="rgba(255,255,255,0.06)" stroke-width="1" style="--path-len:180"/>
+          <line class="assembly-path" id="asm-9" x1="150" y1="240" x2="330" y2="240"
+            stroke="rgba(255,255,255,0.06)" stroke-width="1" style="--path-len:180"/>
+
+          <!-- Pieza 6: Anillo interior de tolerancia -->
+          <circle class="assembly-path" id="asm-10" cx="240" cy="240" r="60"
+            stroke="rgba(27,45,79,0.8)" stroke-width="12"
+            style="--path-len:377"/>
+
+          <!-- Pieza 7: Marcas de ángulo (30° intervals) -->
+          <g class="assembly-path" id="asm-11" style="--path-len:600">
+            <line x1="240" y1="112" x2="240" y2="128" stroke="rgba(184,134,11,0.3)" stroke-width="1"/>
+            <line x1="315.9" y1="152" x2="307.1" y2="167.2" stroke="rgba(184,134,11,0.3)" stroke-width="1"/>
+            <line x1="355.9" y1="228" x2="339.9" y2="228" stroke="rgba(184,134,11,0.3)" stroke-width="1"/>
+            <line x1="315.9" y1="328" x2="307.1" y2="312.8" stroke="rgba(184,134,11,0.3)" stroke-width="1"/>
+            <line x1="240" y1="368" x2="240" y2="352" stroke="rgba(184,134,11,0.3)" stroke-width="1"/>
+            <line x1="164.1" y1="328" x2="172.9" y2="312.8" stroke="rgba(184,134,11,0.3)" stroke-width="1"/>
+            <line x1="124.1" y1="228" x2="140.1" y2="228" stroke="rgba(184,134,11,0.3)" stroke-width="1"/>
+            <line x1="164.1" y1="152" x2="172.9" y2="167.2" stroke="rgba(184,134,11,0.3)" stroke-width="1"/>
+          </g>
+
+          <!-- Pieza 8: Centro —puntos de origen -->
+          <circle class="assembly-path" id="asm-12" cx="240" cy="240" r="8"
+            fill="none" stroke="rgba(184,134,11,0.8)" stroke-width="2"
+            style="--path-len:50"/>
+          <circle cx="240" cy="240" r="3" fill="#D4A017" opacity="0" id="asm-center-dot"/>
+
+          <!-- Cotas (dimensiones técnicas) -->
+          <text class="assembly-path" id="asm-13" x="32" y="244" font-family="IBM Plex Mono" font-size="8" fill="rgba(184,134,11,0.5)" letter-spacing="1" style="--path-len:300">360mm</text>
+          <line class="assembly-path" x1="60" y1="240" x2="220" y2="240" stroke="rgba(184,134,11,0.15)" stroke-width="0.5" style="--path-len:160" id="asm-14"/>
+          <text class="assembly-path" id="asm-15" x="170" y="108" font-family="IBM Plex Mono" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="1" style="--path-len:300">RID-MX · ±0.1mm · ISO 9001</text>
+        </svg>
       </div>
       <div class="image-upload-overlay" onclick="triggerImageUpload('heroImage')">
         <div class="image-upload-label">Cambiar imagen de portada</div>
@@ -1042,9 +1173,9 @@ body.admin-mode .admin-item-controls { display: flex; }
         <div class="proof-stat-sub">Verificado por sistema ISO</div>
       </div>
       <div class="proof-stat">
-        <div class="proof-stat-num">3<em>+</em></div>
-        <div class="proof-stat-label">Líneas de negocio</div>
-        <div class="proof-stat-sub">Industrial · Arq. · UMKA</div>
+        <div class="proof-stat-num">4<em>+</em></div>
+        <div class="proof-stat-label">Capacidades integradas</div>
+        <div class="proof-stat-sub">Láser · CNC · Arq. · Maq.</div>
       </div>
       <div class="proof-stat">
         <div class="proof-stat-num">&lt;<em>24</em></div>
@@ -1062,7 +1193,7 @@ body.admin-mode .admin-item-controls { display: flex; }
     <div class="section-masthead reveal">
       <div class="section-num">01</div>
       <div>
-        <div class="anno" style="margin-bottom:12px;">Capacidades Industriales · Del archivo al metal en horas</div>
+        <div class="anno" style="margin-bottom:12px;">Capacidades de Manufactura Integral · Del archivo al metal en horas</div>
         <h2 class="section-heading">Corte <em>Láser</em> &<br>Manufactura CNC</h2>
         <p class="section-sub" id="servicios-sub" data-field="servicios.subtitle" contenteditable="false"></p>
       </div>
@@ -1082,14 +1213,14 @@ body.admin-mode .admin-item-controls { display: flex; }
   </div>
 </section>
 
-<!-- ═══ ARQUITECTÓNICO ═══ -->
+<!-- ═══ ARQUITECTÓNICO — Scroll-Driven Pérgola ═══ -->
 <section id="arquitectonico" aria-label="Soluciones Arquitectónicas">
   <div class="wrap" style="padding: clamp(48px,8vw,120px) 0;">
     <div class="arch-inner">
       <div>
         <div class="anno" style="color:rgba(255,255,255,0.3);margin-bottom:18px;">
           <span class="anno-num" style="color:var(--amber-light);">SECT. 02</span>
-          Soluciones Arquitectónicas
+          Soluciones Arquitectónicas de Precisión
         </div>
         <div class="arch-section-num">02</div>
         <h2 class="arch-heading" id="arch-heading" data-field="arquitectonico.heading" contenteditable="false"></h2>
@@ -1098,73 +1229,98 @@ body.admin-mode .admin-item-controls { display: flex; }
         <div style="margin-top:24px;">
           <a href="#contacto" class="btn-primary" style="background:var(--amber);border:none;">Solicitar Proyecto Arquitectónico <span class="btn-arrow">→</span></a>
         </div>
-        <button class="admin-add-btn" id="arch-add-btn" onclick="addArchProduct()" style="display:none;margin-top:12px;width:auto;padding:8px 16px;font-family:var(--font-mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;">+ Agregar producto</button>
+        <button class="admin-remove-btn" id="arch-add-btn" onclick="addArchProduct()" style="display:none;margin-top:12px;width:auto;padding:8px 16px;font-family:var(--font-mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--success);border-color:var(--success);background:rgba(27,45,79,0.9);">+ Agregar</button>
       </div>
-      <div class="arch-drawing reveal" style="display:flex;align-items:center;justify-content:center;">
+
+      <!-- SCROLL-DRIVEN PÉRGOLA SVG -->
+      <div id="pergola-svg-wrap" class="reveal">
         <svg viewBox="0 0 480 520" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;" aria-hidden="true">
-          <defs><pattern id="bp" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M0 20 L20 0 L40 20 L20 40 Z" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/></pattern></defs>
-          <rect width="480" height="520" fill="url(#bp)"/>
-          <rect x="20" y="20" width="440" height="36" fill="none" stroke="rgba(184,134,11,0.3)" stroke-width="0.5"/>
-          <text x="240" y="42" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="10" fill="rgba(184,134,11,0.7)" letter-spacing="3">PÉRGOLA TIPO PG-02 · ALZADO FRONTAL</text>
-          <rect x="60" y="100" width="360" height="280" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-          <rect x="60" y="100" width="16" height="280" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-          <rect x="404" y="100" width="16" height="280" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-          <rect x="60" y="100" width="360" height="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-          <rect x="60" y="366" width="360" height="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-          <line x1="60" y1="430" x2="420" y2="430" stroke="rgba(184,134,11,0.5)" stroke-width="0.5"/>
-          <line x1="60" y1="424" x2="60" y2="436" stroke="rgba(184,134,11,0.5)" stroke-width="0.5"/>
-          <line x1="420" y1="424" x2="420" y2="436" stroke="rgba(184,134,11,0.5)" stroke-width="0.5"/>
-          <text x="240" y="445" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="9" fill="rgba(184,134,11,0.6)">3,600 mm</text>
-          <circle cx="60" cy="100" r="3" fill="rgba(184,134,11,0.8)"/>
-          <circle cx="420" cy="100" r="3" fill="rgba(184,134,11,0.8)"/>
-          <line x1="20" y1="470" x2="460" y2="470" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-          <rect x="20" y="480" width="440" height="28" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
-          <text x="110" y="498" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="1">RID INDUSTRIAS MX</text>
-          <text x="280" y="498" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="1">ISO 9001:2015</text>
-          <text x="410" y="498" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="1">REV. 2025</text>
+          <defs>
+            <pattern id="bp2" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M0 20 L20 0 L40 20 L20 40 Z" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="480" height="520" fill="url(#bp2)"/>
+
+          <!-- Title block -->
+          <rect class="pergola-draw-path" id="pg-1" x="20" y="20" width="440" height="36" fill="none" stroke="rgba(184,134,11,0.3)" stroke-width="0.5" style="--path-len:952"/>
+          <text x="240" y="42" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="10" fill="rgba(184,134,11,0.7)" letter-spacing="3" opacity="0" id="pg-text1">PÉRGOLA TIPO PG-02 · ALZADO FRONTAL</text>
+
+          <!-- Columnas izquierda y derecha -->
+          <rect class="pergola-draw-path" id="pg-2" x="60" y="100" width="16" height="280" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="1" style="--path-len:592"/>
+          <rect class="pergola-draw-path" id="pg-3" x="404" y="100" width="16" height="280" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="1" style="--path-len:592"/>
+
+          <!-- Viga superior -->
+          <rect class="pergola-draw-path" id="pg-4" x="60" y="100" width="360" height="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1" style="--path-len:748"/>
+
+          <!-- Viga inferior -->
+          <rect class="pergola-draw-path" id="pg-5" x="60" y="366" width="360" height="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1" style="--path-len:748"/>
+
+          <!-- Celosía / relleno central -->
+          <path class="pergola-draw-path" id="pg-6" d="M76 114 L404 114 L404 366 L76 366 Z" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" style="--path-len:1000"/>
+
+          <!-- Listones horizontales celosía -->
+          <line class="pergola-draw-path" id="pg-7" x1="76" y1="155" x2="404" y2="155" stroke="rgba(255,255,255,0.06)" stroke-width="1" style="--path-len:328"/>
+          <line class="pergola-draw-path" id="pg-8" x1="76" y1="196" x2="404" y2="196" stroke="rgba(255,255,255,0.06)" stroke-width="1" style="--path-len:328"/>
+          <line class="pergola-draw-path" id="pg-9" x1="76" y1="237" x2="404" y2="237" stroke="rgba(255,255,255,0.06)" stroke-width="1" style="--path-len:328"/>
+          <line class="pergola-draw-path" id="pg-10" x1="76" y1="278" x2="404" y2="278" stroke="rgba(255,255,255,0.06)" stroke-width="1" style="--path-len:328"/>
+          <line class="pergola-draw-path" id="pg-11" x1="76" y1="319" x2="404" y2="319" stroke="rgba(255,255,255,0.06)" stroke-width="1" style="--path-len:328"/>
+
+          <!-- Cota ancho -->
+          <line class="pergola-draw-path" id="pg-12" x1="60" y1="430" x2="420" y2="430" stroke="rgba(184,134,11,0.5)" stroke-width="0.5" style="--path-len:360"/>
+          <line class="pergola-draw-path" id="pg-13" x1="60" y1="424" x2="60" y2="436" stroke="rgba(184,134,11,0.5)" stroke-width="0.5" style="--path-len:12"/>
+          <line class="pergola-draw-path" id="pg-14" x1="420" y1="424" x2="420" y2="436" stroke="rgba(184,134,11,0.5)" stroke-width="0.5" style="--path-len:12"/>
+          <text x="240" y="448" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="9" fill="rgba(184,134,11,0.6)" opacity="0" id="pg-text2">3,600 mm</text>
+
+          <!-- Puntos de esquina -->
+          <circle class="pergola-draw-path" id="pg-15" cx="60" cy="100" r="3" fill="rgba(184,134,11,0.8)" style="--path-len:19"/>
+          <circle class="pergola-draw-path" id="pg-16" cx="420" cy="100" r="3" fill="rgba(184,134,11,0.8)" style="--path-len:19"/>
+
+          <!-- Línea separadora y tabla de título -->
+          <line class="pergola-draw-path" id="pg-17" x1="20" y1="470" x2="460" y2="470" stroke="rgba(255,255,255,0.15)" stroke-width="1" style="--path-len:440"/>
+          <rect class="pergola-draw-path" id="pg-18" x="20" y="480" width="440" height="28" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" style="--path-len:936"/>
+          <text x="110" y="498" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="1" opacity="0" id="pg-text3">RID INDUSTRIAS MX</text>
+          <text x="280" y="498" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="1" opacity="0" id="pg-text4">ISO 9001:2015</text>
+          <text x="410" y="498" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="1" opacity="0" id="pg-text5">REV. 2025</text>
         </svg>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ UMKA ═══ -->
-<section id="umka" aria-label="Línea UMKA">
-<div class="wrap" style="padding: clamp(48px,8vw,120px) 0;">
-  <div class="umka-layout">
-    <div class="umka-brand-block reveal">
-      <div class="anno" style="margin-bottom:18px;"><span class="anno-num">SECT. 03</span> Línea Comercial & Mobiliario</div>
-      <span class="umka-logotype">UMKA</span>
-      <span class="umka-logotype-rule">by RID INDUSTRIAS MX</span>
-      <p class="umka-brand-desc" id="umka-brand-desc" data-field="umka.brandDesc" contenteditable="false"></p>
-      <a href="#contacto" class="btn-primary" style="margin-bottom:24px;">Solicitar Catálogo UMKA <span class="btn-arrow">→</span></a>
-      <div style="margin-top:24px;padding:clamp(16px,4vw,20px);border:1px solid var(--rule);background:var(--parchment);">
-        <div class="anno" style="margin-bottom:10px;">Filosofía de producto</div>
-        <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(14px,3.5vw,16px);color:var(--navy);line-height:1.4;" id="umka-philosophy" data-field="umka.philosophy" contenteditable="false"></p>
-      </div>
-    </div>
-    <div class="umka-grid reveal" id="umka-products-grid"></div>
-  </div>
-  <div style="margin-top:16px;display:none;" id="umka-add-wrap">
-    <button class="admin-add-btn" onclick="addUmkaProduct()" style="width:auto;padding:8px 16px;font-family:var(--font-mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--success);border-color:var(--success);background:rgba(27,45,79,0.9);">+ Agregar producto UMKA</button>
-  </div>
-</div>
-</section>
-
-<!-- ═══ PROYECTOS — NUEVO ═══ -->
+<!-- ═══ PROYECTOS v4 ═══ -->
 <section id="proyectos" aria-label="Proyectos realizados">
 <div class="wrap" style="padding: clamp(48px,8vw,120px) 0;">
   <div class="section-masthead reveal">
-    <div class="section-num">04</div>
+    <div class="section-num">03</div>
     <div>
       <div class="anno" style="margin-bottom:12px;">Portafolio · Proyectos ejecutados · Resultados reales</div>
       <h2 class="section-heading">Proyectos que<br><em>hablan por sí solos</em></h2>
-      <p class="section-sub">Manufactura de precisión aplicada a proyectos industriales, arquitectónicos y de mobiliario. Cada entrega bajo sello ISO 9001:2015.</p>
+      <p class="section-sub">Manufactura integral de precisión aplicada a proyectos industriales, arquitectónicos y automotrices. Cada entrega bajo sello ISO 9001:2015.</p>
     </div>
   </div>
-  <div class="proyectos-grid reveal" id="proyectos-grid">
-    <!-- Rendered by JS from Firebase -->
+
+  <!-- Filtros tipo Blueprint -->
+  <div class="proyectos-filters reveal" id="proyectos-filters">
+    <button class="filter-btn active" data-cat="Todos" onclick="filterProyectos(this)">
+      Todos <span class="filter-count" id="fc-todos">0</span>
+    </button>
+    <button class="filter-btn" data-cat="Industrial" onclick="filterProyectos(this)">
+      Industrial <span class="filter-count" id="fc-industrial">0</span>
+    </button>
+    <button class="filter-btn" data-cat="Arquitectónico" onclick="filterProyectos(this)">
+      Arquitectónico <span class="filter-count" id="fc-arquitectonico">0</span>
+    </button>
+    <button class="filter-btn" data-cat="Automotriz" onclick="filterProyectos(this)">
+      Automotriz <span class="filter-count" id="fc-automotriz">0</span>
+    </button>
+    <button class="filter-btn" data-cat="Especiales" onclick="filterProyectos(this)">
+      Especiales <span class="filter-count" id="fc-especiales">0</span>
+    </button>
   </div>
+
+  <div class="proyectos-grid reveal" id="proyectos-grid"></div>
+
   <div style="text-align:center;margin-top:clamp(24px,5vw,40px);">
     <a href="#contacto" class="btn-primary">Tu proyecto es el próximo <span class="btn-arrow">→</span></a>
   </div>
@@ -1193,7 +1349,7 @@ body.admin-mode .admin-item-controls { display: flex; }
       </div>
     </div>
     <div class="director-content reveal">
-      <div class="anno" style="margin-bottom:18px;"><span class="anno-num">SECT. 05</span> Liderazgo & Trayectoria</div>
+      <div class="anno" style="margin-bottom:18px;"><span class="anno-num">SECT. 04</span> Liderazgo & Trayectoria</div>
       <h2 class="section-heading" style="margin-bottom:20px;" id="director-heading" data-field="director.heading" contenteditable="false"></h2>
       <blockquote class="director-quote" id="director-quote" data-field="director.quote" contenteditable="false"></blockquote>
       <p class="director-bio" id="director-bio1" data-field="director.bio1" contenteditable="false"></p>
@@ -1231,7 +1387,7 @@ body.admin-mode .admin-item-controls { display: flex; }
 <section id="historia" aria-label="Historia">
 <div class="wrap" style="padding: clamp(48px,8vw,120px) 0;">
   <div class="reveal">
-    <div class="anno" style="color:rgba(255,255,255,0.3);margin-bottom:14px;"><span class="anno-num" style="color:var(--amber-light);">SECT. 06</span> Línea de Tiempo Institucional</div>
+    <div class="anno" style="color:rgba(255,255,255,0.3);margin-bottom:14px;"><span class="anno-num" style="color:var(--amber-light);">SECT. 05</span> Línea de Tiempo Institucional</div>
     <h2 class="historia-heading">Historia de una<br><em>idea hecha hierro</em></h2>
   </div>
   <div class="timeline-track reveal" id="timeline-track"></div>
@@ -1242,7 +1398,7 @@ body.admin-mode .admin-item-controls { display: flex; }
 <section id="contacto" aria-label="Cotización">
 <div class="wrap" style="padding: clamp(48px,8vw,120px) 0;">
   <div class="section-masthead reveal">
-    <div class="section-num">07</div>
+    <div class="section-num">06</div>
     <div>
       <div class="anno" style="margin-bottom:12px;">Cotización Técnica · Sin Intermediarios · Respuesta &lt;24h</div>
       <h2 class="section-heading">Envía tu<br><em>proyecto ahora</em></h2>
@@ -1279,13 +1435,11 @@ body.admin-mode .admin-item-controls { display: flex; }
         <div class="form-title-ref"><span>REV. 2025</span><span>DOC: RID-MX-006</span></div>
       </div>
       <div class="form-body">
-        <!-- Success state -->
         <div id="form-success">
           <div class="form-success-icon">✓</div>
           <div class="form-success-title">¡Solicitud recibida!</div>
-          <p class="form-success-text">Tu cotización fue registrada correctamente. Un ingeniero de RID Industrias te contactará en menos de 24 horas hábiles con una propuesta formal.<br><br><strong>Folio: <span id="lead-folio">—</span></strong></p>
+          <p class="form-success-text">Tu cotización fue registrada correctamente. Un ingeniero de RID Industrias te contactará en menos de 24 horas hábiles.<br><br><strong>Folio: <span id="lead-folio">—</span></strong></p>
         </div>
-        <!-- Form -->
         <form id="contact-form" novalidate>
           <div class="form-row">
             <div class="form-group"><label for="f-nombre">Nombre Completo *</label><input type="text" id="f-nombre" name="nombre" placeholder="Ing. Juan Torres" required></div>
@@ -1305,7 +1459,6 @@ body.admin-mode .admin-item-controls { display: flex; }
                 <option>Router CNC</option>
                 <option>Fabricación de Maquinaria</option>
                 <option>Celosías / Pérgolas / Barandales</option>
-                <option>Mobiliario UMKA</option>
                 <option>Señalética / Letreros LED</option>
                 <option>Otro / Múltiple</option>
               </select>
@@ -1351,7 +1504,7 @@ body.admin-mode .admin-item-controls { display: flex; }
   <div class="footer-grid">
     <div class="footer-col">
       <div class="footer-logo-text">RID <em>INDUSTRIAS</em></div>
-      <div class="footer-logo-sub">Centro de Manufactura · Est. 2005</div>
+      <div class="footer-logo-sub">Centro de Manufactura Integral · Est. 2005</div>
       <p class="footer-slogan">"Nacidos en ideas,<br>cimbrados en tecnología."</p>
     </div>
     <div class="footer-col">
@@ -1359,7 +1512,6 @@ body.admin-mode .admin-item-controls { display: flex; }
       <ul class="footer-link-list" role="list">
         <li><a href="#servicios">Manufactura Industrial</a></li>
         <li><a href="#arquitectonico">Soluciones Arquitectónicas</a></li>
-        <li><a href="#umka">Línea UMKA</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#director">Nosotros</a></li>
         <li><a href="#contacto">Cotizar Proyecto</a></li>
@@ -1382,14 +1534,15 @@ body.admin-mode .admin-item-controls { display: flex; }
   </div>
 </footer>
 
-<!-- ═══════════════════════════════════════════════════════════════════════
-   FIREBASE SDK + CMS v3.0 — PLATAFORMA INDUSTRIAL INTELIGENTE
-   Arquitectura:
-   - Firestore: web_content/rid_industrias (CMS) + cotizaciones/ (leads)
-   - Storage: imágenes de hero, director, proyectos
-   - Auth: browserSessionPersistence (seguridad por pestaña)
-   - Lead capture: form → Firestore cotizaciones → badge contador admin
-═══════════════════════════════════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════════════════════════════
+   FIREBASE SDK + CMS v4.0 — MECATRÓNICA PRO
+   Módulos:
+   1. Auth (browserSessionPersistence)
+   2. Firestore: web_content/rid_industrias + cotizaciones/ + proyectos/
+   3. Storage: imágenes hero, director, proyectos
+   4. Scroll-Driven Assembly (IntersectionObserver + CSS transitions)
+   5. Proyectos CMS completo (CRUD + image upload + filter)
+═══════════════════════════════════════════════════════════════════ -->
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
 import {
@@ -1398,7 +1551,8 @@ import {
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
 import {
   getFirestore, doc, onSnapshot, updateDoc, setDoc, getDoc,
-  collection, addDoc, serverTimestamp, query, orderBy, getDocs, limit
+  collection, addDoc, deleteDoc, serverTimestamp, query, orderBy,
+  getDocs, limit
 } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
 import {
   getStorage, ref, uploadBytes, getDownloadURL
@@ -1419,25 +1573,26 @@ const auth    = getAuth(app);
 const db      = getFirestore(app);
 const storage = getStorage(app);
 
-/* Session-only auth: al cerrar pestaña, se destruye la sesión admin */
+/* browserSessionPersistence: al cerrar navegador/pestaña, sesión destruida */
 await setPersistence(auth, browserSessionPersistence);
 
 const CONTENT_REF  = doc(db, 'web_content', 'rid_industrias');
 const LEADS_COL    = collection(db, 'cotizaciones');
+const PROYECTOS_COL = collection(db, 'proyectos');
 
-/* ═══════════════════════════════════════════════════════════════════════
-   DEFAULT CONTENT — Seed completo
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   DEFAULT CONTENT SEED
+═══════════════════════════════════════════════════════════════════ */
 const DEFAULT_CONTENT = {
   hero: {
     titleLine1:     "Precisión",
     titleLine2:     "Industrial",
     titleSub:       "desde Ciudad Sahagún",
-    descriptor:     "Centro de manufactura de alta exactitud. Corte láser, CNC y fabricación de maquinaria industrial. Veinte años de trayectoria respaldados por certificación ISO 9001:2015 y presencia internacional.",
+    descriptor:     "Centro de manufactura integral de alta exactitud. Corte láser, CNC y fabricación de maquinaria industrial. Veinte años de trayectoria respaldados por certificación ISO 9001:2015 y presencia internacional.",
     credYears:      "20+",
     credYearsLabel: "Años de\nexperiencia",
-    credLines:      "3",
-    credLinesLabel: "Líneas de\nnegocio",
+    credLines:      "4+",
+    credLinesLabel: "Capacidades\nintegrales",
     heroImageUrl:   ""
   },
   servicios: {
@@ -1491,32 +1646,13 @@ const DEFAULT_CONTENT = {
       { code: "ARQ-004 · Protecciones", name: "Rejas & Protecciones", desc: "Rejas residenciales y comerciales con diseño personalizado. Sin sacrificar estética por seguridad." }
     ]
   },
-  umka: {
-    brandDesc: "Nació de la misma convicción que fundó RID: si algo se puede diseñar mejor, se diseña. Muebles infantiles fabricados con la misma tecnología CNC que usamos para la industria pesada. Precisión al servicio de quienes aprenden.",
-    philosophy: '"Dar hasta hacerte imparable."',
-    products: [
-      { code: "UMK-001 · Educativo", name: "Pupitres", desc: "Individuales y dobles. Ergonomía diseñada para primaria y secundaria. Estructura CNC en MDF industrial." },
-      { code: "UMK-002 · Educativo", name: "Libreros Modulares", desc: "Para aula o biblioteca. Módulos intercambiables, acabados durables y ensamble sin herramientas especiales." },
-      { code: "UMK-003 · Señalética", name: "Señalética LED", desc: "Letreros luminosos y señalización corporativa. Acrílico cortado por láser con retroiluminación integrada." },
-      { code: "UMK-004 · Branding", name: "Letras 3D", desc: "Logotipos volumétricos en acrílico o acero con retroiluminación LED. Instalación en fachada o interior." },
-      { code: "UMK-005 · Equipamiento", name: "Equipamiento Escolar", desc: "Soluciones integrales para aulas, laboratorios, oficinas y espacios públicos. Proyectos llave en mano." },
-      { code: "UMK-006 · Especial", name: "Proyectos a Medida", desc: "Diseño y fabricación según especificaciones del cliente. Asesoría de ingeniería incluida sin costo adicional." }
-    ]
-  },
-  proyectos: {
-    items: [
-      { code: "PRY-001", categoria: "Arquitectónico", titulo: "Celosía paramétrica fachada comercial", desc: "Diseño y fabricación de celosía en acero inoxidable 304. 180m² instalados.", tags: ["Acero inox.", "Láser fibra", "Instalación"] },
-      { code: "PRY-002", categoria: "Industrial", titulo: "Maquinaria para línea de ensamble", desc: "Diseño, fabricación e instalación de sistema de transporte neumático. Planta automotriz.", tags: ["Maquinaria", "SolidWorks", "ISO 9001"] },
-      { code: "PRY-003", categoria: "UMKA", titulo: "Equipamiento escolar 120 aulas", desc: "Producción y entrega de pupitres dobles y libreros modulares. Proyecto gobierno.", tags: ["CNC", "MDF industrial", "Llave en mano"] }
-    ]
-  },
   director: {
     name: "Ricardo Puga Aboytes",
     titleTag: "Director General · RID Industrias MX",
     heading: "Veinte años\nde certeza",
     quote: '"Lo medible es mejorable. Nacidos en ideas, cimbrados en tecnología."',
-    bio1: "Ricardo Puga Aboytes fundó RID INDUSTRIAS en 2005 con una convicción simple: en manufactura, la precisión no es un diferenciador, es la obligación mínima. Dos décadas después, esa filosofía es el ADN de una empresa certificada ISO 9001:2015, con tres líneas de negocio activas y presencia internacional.",
-    bio2: "Bajo su dirección, RID incorporó tecnología láser de fibra óptica y CO₂, desarrolló la línea arquitectónica y lanzó la marca UMKA — sin perder nunca el foco en lo esencial: entregar exactamente lo que se comprometió, cuando se comprometió.",
+    bio1: "Ricardo Puga Aboytes fundó RID INDUSTRIAS en 2005 con una convicción simple: en manufactura, la precisión no es un diferenciador, es la obligación mínima. Dos décadas después, esa filosofía es el ADN de una empresa certificada ISO 9001:2015 con presencia internacional.",
+    bio2: "Bajo su dirección, RID incorporó tecnología láser de fibra óptica y CO₂, desarrolló la línea arquitectónica y expandió capacidades de maquinaria industrial — sin perder nunca el foco en lo esencial: entregar exactamente lo que se comprometió, cuando se comprometió.",
     isoText: "El ISO 9001:2015 no es un papel enmarcado. Es el protocolo que rige cada proceso, cada medición y cada entrega. Auditado, verificado y renovado. Sin excepciones.",
     photoUrl: ""
   },
@@ -1524,8 +1660,8 @@ const DEFAULT_CONTENT = {
     nodes: [
       { year: "2005", event: "Fundación en Ciudad Sahagún", detail: "Ricardo Puga Aboytes funda RID INDUSTRIAS en el corazón de la zona industrial de Hidalgo, con un taller de precisión y una convicción inquebrantable." },
       { year: "2008–12", event: "Tecnología Láser", detail: "Incorporación de sistemas láser de fibra óptica y CO₂. RID se consolida como proveedor de manufactura de precisión para la industria regional." },
-      { year: "2015–18", event: "Certificación ISO & Diversificación", detail: "Obtención del certificado ISO 9001:2015. Lanzamiento de la línea arquitectónica y la marca UMKA de mobiliario educativo." },
-      { year: "2020–Hoy", event: "Presencia Internacional", detail: "Empresa 100% mexicana con tres unidades de negocio activas, equipo en crecimiento y exportación de know-how. La filosofía intacta: lo medible es mejorable." }
+      { year: "2015–18", event: "Certificación ISO & Diversificación", detail: "Obtención del certificado ISO 9001:2015. Lanzamiento de la línea arquitectónica especializada en soluciones para constructoras y despachos de diseño." },
+      { year: "2020–Hoy", event: "Manufactura Integral", detail: "Empresa 100% mexicana con capacidades integrales: láser, CNC, maquinaria y arquitectónico. Exportación de know-how y equipo en crecimiento continuo." }
     ]
   },
   contacto: {
@@ -1537,13 +1673,17 @@ const DEFAULT_CONTENT = {
   }
 };
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    STATE
-═══════════════════════════════════════════════════════════════════════ */
-let currentData     = null;
-let isAdminMode     = false;
+═══════════════════════════════════════════════════════════════════ */
+let currentData      = null;
+let isAdminMode      = false;
 let pendingSaveCount = 0;
-let unsubscribe     = null;
+let unsubscribe      = null;
+let allProyectos     = [];     // cache local de proyectos
+let proyModalTags    = [];     // tags en modal
+let proyModalImgFile = null;   // archivo de imagen pendiente
+let proyModalImgUrl  = '';     // url ya subida (si edición)
 
 /* ── Toolbar height CSS var ── */
 function setToolbarHeight() {
@@ -1551,16 +1691,16 @@ function setToolbarHeight() {
   document.documentElement.style.setProperty('--toolbar-h', isAdminMode ? (tb.offsetHeight + 'px') : '0px');
 }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    AUTH
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 onAuthStateChanged(auth, (user) => {
   user ? enableAdminMode(user) : disableAdminMode();
 });
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    FIRESTORE LISTENER
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 async function startListening() {
   const snap = await getDoc(CONTENT_REF);
   if (!snap.exists()) await setDoc(CONTENT_REF, DEFAULT_CONTENT);
@@ -1570,11 +1710,13 @@ async function startListening() {
     renderAll(currentData);
     hideLoadingScreen();
   }, (err) => {
-    console.error('[RID v3] Firestore error:', err);
+    console.error('[RID v4] Firestore error:', err);
     currentData = DEFAULT_CONTENT;
     renderAll(DEFAULT_CONTENT);
     hideLoadingScreen();
   });
+  /* Cargar proyectos de colección independiente */
+  loadProyectos();
 }
 
 function hideLoadingScreen() {
@@ -1583,15 +1725,13 @@ function hideLoadingScreen() {
   setTimeout(() => el.style.display = 'none', 600);
 }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    RENDER
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 function renderAll(data) {
   renderHero(data.hero);
   renderServicios(data.servicios);
   renderArquitectonico(data.arquitectonico);
-  renderUmka(data.umka);
-  renderProyectos(data.proyectos);
   renderDirector(data.director);
   renderHistoria(data.historia);
   renderContacto(data.contacto);
@@ -1636,8 +1776,6 @@ function renderServicios(s) {
 
   (s.items || []).forEach((item, idx) => {
     const isFirst = idx === 0;
-
-    /* Sidebar nav */
     const navItem = document.createElement('div');
     navItem.className = `service-nav-item${isFirst ? ' active' : ''}`;
     navItem.onclick = () => showPanel(idx, navItem, svcTab);
@@ -1649,7 +1787,6 @@ function renderServicios(s) {
       </div>`;
     navEl.appendChild(navItem);
 
-    /* Mobile tab */
     const svcTab = document.createElement('button');
     svcTab.className = `svc-tab${isFirst ? ' active' : ''}`;
     svcTab.textContent = item.navLabel || item.title;
@@ -1657,7 +1794,6 @@ function renderServicios(s) {
     svcTab.onclick = () => showPanel(idx, navItem, svcTab);
     tabsEl.appendChild(svcTab);
 
-    /* Panel */
     const panel = document.createElement('div');
     panel.className = `service-panel${isFirst ? ' active' : ''}`;
     panel.id = `panel-${idx}`;
@@ -1712,57 +1848,10 @@ function renderArquitectonico(a) {
       <div class="admin-item-controls">
         <button class="admin-remove-btn" onclick="removeArchProduct(${idx})" title="Eliminar">✕</button>
       </div>
-      <div class="arch-product-code" data-arch-field="products.${idx}.code">${p.code||''}</div>
-      <div class="arch-product-name" data-arch-field="products.${idx}.name">${p.name||''}</div>
-      <div class="arch-product-desc" data-arch-field="products.${idx}.desc">${p.desc||''}</div>`;
+      <div class="arch-product-code">${p.code||''}</div>
+      <div class="arch-product-name">${p.name||''}</div>
+      <div class="arch-product-desc">${p.desc||''}</div>`;
     grid.appendChild(cell);
-  });
-}
-
-function renderUmka(u) {
-  if (!u) return;
-  setText('umka-brand-desc', u.brandDesc);
-  setText('umka-philosophy', u.philosophy);
-  const grid = document.getElementById('umka-products-grid');
-  if (!grid) return;
-  grid.innerHTML = '';
-  (u.products || []).forEach((p, idx) => {
-    const item = document.createElement('div');
-    item.className = 'umka-item';
-    item.dataset.umkaIdx = idx;
-    item.innerHTML = `
-      <div class="admin-item-controls">
-        <button class="admin-remove-btn" onclick="removeUmkaProduct(${idx})" title="Eliminar">✕</button>
-      </div>
-      <div class="umka-item-code" data-umka-field="products.${idx}.code">${p.code||''}</div>
-      <div class="umka-item-name" data-umka-field="products.${idx}.name">${p.name||''}</div>
-      <div class="umka-item-desc" data-umka-field="products.${idx}.desc">${p.desc||''}</div>`;
-    grid.appendChild(item);
-  });
-}
-
-function renderProyectos(p) {
-  if (!p) return;
-  const grid = document.getElementById('proyectos-grid');
-  if (!grid) return;
-  grid.innerHTML = '';
-  (p.items || []).forEach((proj, idx) => {
-    const card = document.createElement('div');
-    card.className = 'proyecto-card';
-    card.innerHTML = `
-      <div class="proyecto-card-img">
-        <div class="proyecto-placeholder-icon">◈</div>
-        <div class="proyecto-category-badge">${proj.categoria || ''}</div>
-      </div>
-      <div class="proyecto-card-body">
-        <div class="proyecto-num">${proj.code || `PRY-00${idx+1}`}</div>
-        <div class="proyecto-title">${proj.titulo || ''}</div>
-        <div class="proyecto-desc">${proj.desc || ''}</div>
-        <div class="proyecto-specs">
-          ${(proj.tags||[]).map(t=>`<span class="proyecto-spec-tag">${t}</span>`).join('')}
-        </div>
-      </div>`;
-    grid.appendChild(card);
   });
 }
 
@@ -1802,9 +1891,9 @@ function renderHistoria(h) {
         <button class="admin-remove-btn" onclick="removeHistoriaNode(${idx})" title="Eliminar">✕</button>
       </div>
       <div class="timeline-marker"></div>
-      <div class="timeline-year" data-hist-field="nodes.${idx}.year">${node.year||''}</div>
-      <div class="timeline-event" data-hist-field="nodes.${idx}.event">${node.event||''}</div>
-      <div class="timeline-detail" data-hist-field="nodes.${idx}.detail">${node.detail||''}</div>`;
+      <div class="timeline-year">${node.year||''}</div>
+      <div class="timeline-event">${node.event||''}</div>
+      <div class="timeline-detail">${node.detail||''}</div>`;
     track.appendChild(nodeEl);
   });
 }
@@ -1822,86 +1911,370 @@ function renderContacto(c) {
   if (fu) fu.textContent = c.ubicacion || '';
 }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   LEAD CAPTURE — Formulario → Firestore cotizaciones/
-   Arquitectura de colección:
-   cotizaciones/{auto-id}: {
-     folio, nombre, empresa, email, telefono, servicio,
-     material, cantidad, fecha_entrega, descripcion,
-     estado: "nuevo" | "revisado" | "cotizado" | "ganado" | "perdido",
-     prioridad: "normal" | "alta",
-     origen: "web",
-     creadoEn: serverTimestamp(),
-     ip: (si se puede), userAgent
-   }
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   PROYECTOS CMS — Firestore collection independiente
+   Colección: proyectos/{auto-id}
+   Campos: code, categoria, titulo, desc, cliente, anio, tags[], imageUrl, creadoEn, orden
+═══════════════════════════════════════════════════════════════════ */
+
+async function loadProyectos() {
+  try {
+    const q    = query(PROYECTOS_COL, orderBy('creadoEn', 'desc'));
+    const snap = await getDocs(q);
+    allProyectos = [];
+    snap.forEach(d => allProyectos.push({ id: d.id, ...d.data() }));
+    if (allProyectos.length === 0) {
+      /* Seed de proyectos por defecto si colección vacía */
+      const defaults = [
+        { code:"PRY-001", categoria:"Arquitectónico", titulo:"Celosía paramétrica fachada comercial", desc:"Diseño y fabricación de celosía en acero inoxidable 304. 180m² instalados.", tags:["Acero inox.","Láser fibra","Instalación"], imageUrl:"", cliente:"", anio:"2023", creadoEn: null },
+        { code:"PRY-002", categoria:"Industrial", titulo:"Maquinaria para línea de ensamble", desc:"Diseño, fabricación e instalación de sistema de transporte neumático para planta automotriz.", tags:["Maquinaria","SolidWorks","ISO 9001"], imageUrl:"", cliente:"", anio:"2022", creadoEn: null },
+        { code:"PRY-003", categoria:"Automotriz", titulo:"Herramental de precisión", desc:"Fabricación de herramental de sujeción y verificación para línea de producción automotriz.", tags:["CNC","Acero al carbono","Herramental"], imageUrl:"", cliente:"", anio:"2024", creadoEn: null }
+      ];
+      for (const p of defaults) {
+        const docRef = await addDoc(PROYECTOS_COL, { ...p, creadoEn: serverTimestamp() });
+        allProyectos.push({ id: docRef.id, ...p });
+      }
+    }
+    renderProyectos();
+  } catch(e) {
+    console.error('[RID v4] loadProyectos error:', e);
+    renderProyectos();
+  }
+}
+
+function renderProyectos(filterCat = 'Todos') {
+  const grid = document.getElementById('proyectos-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  /* Actualizar contadores de filtros */
+  const cats = ['Industrial','Arquitectónico','Automotriz','Especiales'];
+  const total = allProyectos.length;
+  const el = document.getElementById('fc-todos');
+  if (el) el.textContent = total;
+  cats.forEach(cat => {
+    const c = document.getElementById(`fc-${cat.toLowerCase().replace('ó','o').replace('é','e')}`);
+    if (c) c.textContent = allProyectos.filter(p => p.categoria === cat).length;
+  });
+
+  const filtered = filterCat === 'Todos' ? allProyectos : allProyectos.filter(p => p.categoria === filterCat);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div style="grid-column:1/-1;padding:40px;text-align:center;background:var(--paper);">
+      <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;color:var(--ink-light);">Sin proyectos en esta categoría${isAdminMode ? ' — agrega uno con el botón "+ Proyecto" arriba' : ''}.</p>
+    </div>`;
+    return;
+  }
+
+  filtered.forEach((proj) => {
+    const card = document.createElement('div');
+    card.className = 'proyecto-card';
+    card.dataset.cat = proj.categoria || '';
+    card.dataset.id  = proj.id;
+    card.innerHTML = `
+      <div class="proyecto-card-img">
+        ${proj.imageUrl ? `<img src="${proj.imageUrl}" alt="${proj.titulo||''}" loading="lazy">` : '<div class="proyecto-placeholder-icon">◈</div>'}
+        <div class="proyecto-category-badge">${proj.categoria || ''}</div>
+      </div>
+      <div class="proyecto-card-body">
+        <div class="proyecto-num">${proj.code || ''} ${proj.anio ? '· '+proj.anio : ''}</div>
+        <div class="proyecto-title">${proj.titulo || ''}</div>
+        <div class="proyecto-desc">${proj.desc || ''}</div>
+        <div class="proyecto-specs">
+          ${(proj.tags||[]).map(t=>`<span class="proyecto-spec-tag">${t}</span>`).join('')}
+        </div>
+      </div>
+      <div class="proyecto-admin-bar">
+        <button class="proy-edit-btn" onclick="openProyectoModal('${proj.id}')">✎ Editar</button>
+        <button class="proy-img-btn" onclick="triggerProyImageUpload('${proj.id}')">↑ Imagen</button>
+        <input type="file" accept="image/*" style="display:none;" id="proy-img-${proj.id}" onchange="handleProyImageUpload(this,'${proj.id}')">
+        <button class="proy-del-btn" onclick="deleteProyecto('${proj.id}')">✕ Eliminar</button>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+/* ── Filtrado ── */
+window.filterProyectos = function(btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProyectos(btn.dataset.cat);
+};
+
+/* ── CRUD Proyectos ── */
+window.openProyectoModal = function(id) {
+  if (!isAdminMode) return;
+  proyModalTags    = [];
+  proyModalImgFile = null;
+  proyModalImgUrl  = '';
+  const errEl = document.getElementById('proy-modal-error');
+  if (errEl) errEl.classList.remove('show');
+
+  if (id) {
+    /* Modo edición */
+    const proj = allProyectos.find(p => p.id === id);
+    if (!proj) return;
+    document.getElementById('proy-modal-title-text').textContent = '◈ Editar Proyecto';
+    document.getElementById('proy-edit-id').value = id;
+    document.getElementById('proy-code').value      = proj.code || '';
+    document.getElementById('proy-categoria').value = proj.categoria || '';
+    document.getElementById('proy-titulo').value    = proj.titulo || '';
+    document.getElementById('proy-desc').value      = proj.desc || '';
+    document.getElementById('proy-cliente').value   = proj.cliente || '';
+    document.getElementById('proy-anio').value      = proj.anio || '';
+    proyModalTags   = [...(proj.tags || [])];
+    proyModalImgUrl = proj.imageUrl || '';
+    const preview = document.getElementById('proy-upload-preview');
+    const hint    = document.getElementById('proy-upload-hint');
+    if (proyModalImgUrl) {
+      preview.src = proyModalImgUrl;
+      preview.style.display = 'block';
+      hint.style.display = 'none';
+    } else {
+      preview.style.display = 'none';
+      hint.style.display = '';
+    }
+  } else {
+    /* Modo nuevo */
+    document.getElementById('proy-modal-title-text').textContent = '◈ Nuevo Proyecto';
+    document.getElementById('proy-edit-id').value = '';
+    document.getElementById('proy-code').value = `PRY-${String(allProyectos.length + 1).padStart(3,'0')}`;
+    document.getElementById('proy-categoria').value = '';
+    document.getElementById('proy-titulo').value = '';
+    document.getElementById('proy-desc').value = '';
+    document.getElementById('proy-cliente').value = '';
+    document.getElementById('proy-anio').value = new Date().getFullYear();
+    document.getElementById('proy-upload-preview').style.display = 'none';
+    document.getElementById('proy-upload-hint').style.display = '';
+  }
+  renderProyTags();
+  document.getElementById('proyecto-modal').classList.add('open');
+};
+
+window.closeProyectoModal = function() {
+  document.getElementById('proyecto-modal').classList.remove('open');
+};
+
+window.saveProyecto = async function() {
+  const errEl  = document.getElementById('proy-modal-error');
+  const saveBtn = document.getElementById('proy-save-btn');
+  errEl.classList.remove('show');
+
+  const titulo    = document.getElementById('proy-titulo').value.trim();
+  const categoria = document.getElementById('proy-categoria').value;
+  if (!titulo || !categoria) {
+    errEl.classList.add('show');
+    return;
+  }
+
+  saveBtn.disabled = true;
+  saveBtn.textContent = '⟳ Guardando...';
+  setSaveState('saving', '● Guardando proyecto...');
+
+  try {
+    /* Subir imagen si hay una nueva */
+    let imageUrl = proyModalImgUrl;
+    if (proyModalImgFile) {
+      const storRef  = ref(storage, `rid_industrias/proyectos/${Date.now()}_${proyModalImgFile.name}`);
+      const snapshot = await uploadBytes(storRef, proyModalImgFile);
+      imageUrl = await getDownloadURL(snapshot.ref);
+    }
+
+    const payload = {
+      code:      document.getElementById('proy-code').value.trim(),
+      categoria,
+      titulo,
+      desc:      document.getElementById('proy-desc').value.trim(),
+      cliente:   document.getElementById('proy-cliente').value.trim(),
+      anio:      document.getElementById('proy-anio').value.trim(),
+      tags:      [...proyModalTags],
+      imageUrl
+    };
+
+    const editId = document.getElementById('proy-edit-id').value;
+    if (editId) {
+      await updateDoc(doc(db, 'proyectos', editId), payload);
+      const idx = allProyectos.findIndex(p => p.id === editId);
+      if (idx !== -1) allProyectos[idx] = { id: editId, ...payload };
+    } else {
+      payload.creadoEn = serverTimestamp();
+      const docRef = await addDoc(PROYECTOS_COL, payload);
+      allProyectos.unshift({ id: docRef.id, ...payload });
+    }
+
+    setSaveState('saved', '✓ Proyecto guardado');
+    setTimeout(() => { if (pendingSaveCount===0) setSaveState('','Listo'); }, 2000);
+    closeProyectoModal();
+    const activeFilter = document.querySelector('.filter-btn.active');
+    renderProyectos(activeFilter ? activeFilter.dataset.cat : 'Todos');
+    if (isAdminMode) refreshLeadsCount();
+  } catch(err) {
+    console.error('[RID v4] saveProyecto error:', err);
+    setSaveState('error', '✕ Error al guardar');
+    errEl.textContent = '⚠ Error al guardar. Verifica permisos de Firestore/Storage.';
+    errEl.classList.add('show');
+  } finally {
+    saveBtn.disabled = false;
+    saveBtn.textContent = 'Guardar Proyecto →';
+  }
+};
+
+window.deleteProyecto = async function(id) {
+  if (!isAdminMode || !confirm('¿Eliminar este proyecto? Esta acción no se puede deshacer.')) return;
+  try {
+    await deleteDoc(doc(db, 'proyectos', id));
+    allProyectos = allProyectos.filter(p => p.id !== id);
+    const activeFilter = document.querySelector('.filter-btn.active');
+    renderProyectos(activeFilter ? activeFilter.dataset.cat : 'Todos');
+    setSaveState('saved', '✓ Proyecto eliminado');
+    setTimeout(() => setSaveState('','Listo'), 2000);
+  } catch(err) {
+    console.error('[RID v4] deleteProyecto error:', err);
+    alert('Error al eliminar. Verifica los permisos de Firestore.');
+  }
+};
+
+/* Subida rápida de imagen desde card (admin bar) */
+window.triggerProyImageUpload = function(id) {
+  document.getElementById(`proy-img-${id}`)?.click();
+};
+window.handleProyImageUpload = async function(input, id) {
+  const file = input.files[0];
+  if (!file || !isAdminMode) return;
+  setSaveState('saving', '● Subiendo imagen...');
+  try {
+    const storRef  = ref(storage, `rid_industrias/proyectos/${id}_${Date.now()}_${file.name}`);
+    const snapshot = await uploadBytes(storRef, file);
+    const imageUrl = await getDownloadURL(snapshot.ref);
+    await updateDoc(doc(db, 'proyectos', id), { imageUrl });
+    const idx = allProyectos.findIndex(p => p.id === id);
+    if (idx !== -1) allProyectos[idx].imageUrl = imageUrl;
+    setSaveState('saved', '✓ Imagen actualizada');
+    setTimeout(() => setSaveState('','Listo'), 2000);
+    const activeFilter = document.querySelector('.filter-btn.active');
+    renderProyectos(activeFilter ? activeFilter.dataset.cat : 'Todos');
+  } catch(err) {
+    console.error('[RID v4] handleProyImageUpload error:', err);
+    setSaveState('error', '✕ Error al subir imagen');
+    alert('Error al subir imagen. Verifica permisos de Firebase Storage.');
+  }
+};
+
+/* Preview de imagen en modal */
+window.handleProyImageSelect = function(input) {
+  const file = input.files[0];
+  if (!file) return;
+  proyModalImgFile = file;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const preview = document.getElementById('proy-upload-preview');
+    const hint    = document.getElementById('proy-upload-hint');
+    preview.src = e.target.result;
+    preview.style.display = 'block';
+    hint.style.display = 'none';
+  };
+  reader.readAsDataURL(file);
+};
+
+/* Tags del modal */
+function renderProyTags() {
+  const container = document.getElementById('proy-tags-display');
+  if (!container) return;
+  container.innerHTML = '';
+  proyModalTags.forEach((tag, i) => {
+    const pill = document.createElement('span');
+    pill.className = 'proy-tag-pill';
+    pill.innerHTML = `${tag} <button class="proy-tag-remove" onclick="removeProyTag(${i})" type="button">✕</button>`;
+    container.appendChild(pill);
+  });
+  if (proyModalTags.length === 0) {
+    container.innerHTML = '<span style="font-family:var(--font-mono);font-size:9px;color:var(--ink-light);">Sin etiquetas</span>';
+  }
+}
+window.addProyTag = function() {
+  const input = document.getElementById('proy-tag-input');
+  const val   = input.value.trim();
+  if (!val || proyModalTags.includes(val) || proyModalTags.length >= 8) return;
+  proyModalTags.push(val);
+  input.value = '';
+  renderProyTags();
+};
+window.removeProyTag = function(idx) {
+  proyModalTags.splice(idx, 1);
+  renderProyTags();
+};
+document.getElementById('proy-tag-input')?.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') { e.preventDefault(); window.addProyTag(); }
+});
+
+/* ═══════════════════════════════════════════════════════════════════
+   LEAD CAPTURE
+═══════════════════════════════════════════════════════════════════ */
 async function submitLead(formData) {
   const folio = `RID-${Date.now().toString(36).toUpperCase()}-${Math.floor(Math.random()*100)}`;
   const lead = {
     folio,
-    nombre:         formData.get('nombre') || '',
-    empresa:        formData.get('empresa') || '',
-    email:          formData.get('email') || '',
-    telefono:       formData.get('telefono') || '',
-    servicio:       formData.get('servicio') || '',
-    material:       formData.get('material') || '',
-    cantidad:       formData.get('cantidad') || '',
-    fecha_entrega:  formData.get('fecha_entrega') || '',
-    descripcion:    formData.get('descripcion') || '',
-    estado:         'nuevo',
-    prioridad:      'normal',
-    origen:         'web',
-    userAgent:      navigator.userAgent.substring(0, 200),
-    creadoEn:       serverTimestamp()
+    nombre:        formData.get('nombre') || '',
+    empresa:       formData.get('empresa') || '',
+    email:         formData.get('email') || '',
+    telefono:      formData.get('telefono') || '',
+    servicio:      formData.get('servicio') || '',
+    material:      formData.get('material') || '',
+    cantidad:      formData.get('cantidad') || '',
+    fecha_entrega: formData.get('fecha_entrega') || '',
+    descripcion:   formData.get('descripcion') || '',
+    estado:        'nuevo',
+    prioridad:     'normal',
+    origen:        'web',
+    userAgent:     navigator.userAgent.substring(0, 200),
+    creadoEn:      serverTimestamp()
   };
   const docRef = await addDoc(LEADS_COL, lead);
   return { folio, id: docRef.id };
 }
 
-/* Contador de leads para admin */
 async function refreshLeadsCount() {
   if (!isAdminMode) return;
   try {
-    const q    = query(LEADS_COL, orderBy('creadoEn', 'desc'));
-    const snap = await getDocs(q);
+    const snap  = await getDocs(LEADS_COL);
     const count = snap.size;
-    const el = document.getElementById('leads-count');
+    const el    = document.getElementById('leads-count');
     if (el) el.textContent = count;
     document.getElementById('leads-badge').classList.toggle('visible', count > 0);
   } catch(e) { /* sin permisos fuera de admin */ }
 }
 
-/* ─── Leads panel simple ─── */
 window.showLeadsPanel = async function() {
   if (!isAdminMode) return;
   try {
-    const q    = query(LEADS_COL, orderBy('creadoEn', 'desc'), limit(20));
+    const q    = query(LEADS_COL, orderBy('creadoEn', 'desc'), limit(30));
     const snap = await getDocs(q);
-    let html = `<div style="position:fixed;inset:0;z-index:9998;background:rgba(26,28,30,0.95);backdrop-filter:blur(8px);padding:var(--pad-x);overflow-y:auto;display:flex;flex-direction:column;gap:0;">
-      <div style="max-width:800px;margin:0 auto;width:100%;">
+    let html = `<div style="position:fixed;inset:0;z-index:9998;background:rgba(26,28,30,0.95);backdrop-filter:blur(8px);padding:var(--pad-x);overflow-y:auto;">
+      <div style="max-width:800px;margin:0 auto;padding:20px 0;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.1);">
-          <div style="font-family:var(--font-display);font-size:clamp(18px,5vw,24px);font-weight:700;color:white;">Cotizaciones Recibidas</div>
+          <div style="font-family:var(--font-display);font-size:clamp(18px,5vw,24px);font-weight:700;color:white;">📋 Cotizaciones Recibidas</div>
           <button onclick="document.getElementById('leads-overlay').remove()" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:rgba(255,255,255,0.5);background:none;border:1px solid rgba(255,255,255,0.15);padding:8px 16px;cursor:pointer;">✕ Cerrar</button>
         </div>`;
     if (snap.empty) {
-      html += `<p style="font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,0.3);text-align:center;padding:40px 0;">Sin cotizaciones aún. El primer lead aparecerá aquí.</p>`;
+      html += `<p style="font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,0.3);text-align:center;padding:40px 0;">Sin cotizaciones aún.</p>`;
     } else {
       snap.forEach(d => {
-        const l = d.data();
-        const fecha = l.creadoEn?.toDate ? l.creadoEn.toDate().toLocaleDateString('es-MX') : '—';
+        const l     = d.data();
+        const fecha = l.creadoEn?.toDate ? l.creadoEn.toDate().toLocaleString('es-MX') : '—';
         html += `<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-left:3px solid var(--amber);padding:16px 20px;margin-bottom:8px;">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
             <div>
-              <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.12em;color:var(--amber);margin-bottom:4px;">${l.folio || d.id}</div>
-              <div style="font-family:var(--font-display);font-size:16px;font-weight:700;color:white;">${l.nombre || '—'}</div>
-              <div style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,0.4);">${l.empresa || ''} ${l.empresa && l.email ? '·' : ''} ${l.email || ''}</div>
+              <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.12em;color:var(--amber);margin-bottom:4px;">${l.folio||d.id}</div>
+              <div style="font-family:var(--font-display);font-size:16px;font-weight:700;color:white;">${l.nombre||'—'}</div>
+              <div style="font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,0.4);">${l.empresa||''} ${l.empresa&&l.email?'·':''} ${l.email||''} ${l.telefono?'· '+l.telefono:''}</div>
             </div>
             <div style="text-align:right;">
-              <div style="font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;color:rgba(255,255,255,0.3);">${fecha}</div>
-              <div style="font-family:var(--font-mono);font-size:10px;color:white;margin-top:4px;">${l.servicio || '—'}</div>
+              <div style="font-family:var(--font-mono);font-size:9px;color:rgba(255,255,255,0.3);">${fecha}</div>
+              <div style="font-family:var(--font-mono);font-size:10px;color:white;margin-top:4px;">${l.servicio||'—'}</div>
+              ${l.material ? `<div style="font-family:var(--font-mono);font-size:9px;color:rgba(255,255,255,0.3);">${l.material}</div>` : ''}
             </div>
           </div>
-          ${l.descripcion ? `<div style="font-size:12px;color:rgba(255,255,255,0.35);line-height:1.5;border-top:1px solid rgba(255,255,255,0.06);padding-top:10px;">${l.descripcion.substring(0,200)}${l.descripcion.length>200?'...':''}</div>` : ''}
+          ${l.descripcion ? `<div style="font-size:12px;color:rgba(255,255,255,0.35);line-height:1.5;border-top:1px solid rgba(255,255,255,0.06);padding-top:10px;">${l.descripcion.substring(0,300)}${l.descripcion.length>300?'...':''}</div>` : ''}
         </div>`;
       });
     }
@@ -1911,21 +2284,20 @@ window.showLeadsPanel = async function() {
     overlay.innerHTML = html;
     document.body.appendChild(overlay);
   } catch(e) {
-    alert('No se pudo cargar el panel de leads. Verifica las reglas de Firestore.');
+    alert('No se pudo cargar el panel de leads.');
   }
 };
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    ADMIN MODE
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 function enableAdminMode(user) {
   isAdminMode = true;
   document.body.classList.add('admin-mode');
   document.getElementById('admin-toolbar').classList.add('active');
   document.getElementById('nav-admin-badge').classList.add('visible');
   document.getElementById('toolbar-user-email').textContent = user.email;
-  document.getElementById('arch-add-btn').style.display = 'block';
-  document.getElementById('umka-add-wrap').style.display = 'block';
+  document.getElementById('arch-add-btn').style.display = 'flex';
   setToolbarHeight();
   activateEditableFields();
   refreshLeadsCount();
@@ -1937,15 +2309,14 @@ function disableAdminMode() {
   document.getElementById('nav-admin-badge').classList.remove('visible');
   document.getElementById('leads-badge').classList.remove('visible');
   document.getElementById('arch-add-btn').style.display = 'none';
-  document.getElementById('umka-add-wrap').style.display = 'none';
   setToolbarHeight();
   deactivateEditableFields();
   hideSavingWarning();
 }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    EDITABLE FIELDS
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 function activateEditableFields() {
   document.querySelectorAll('[data-field]').forEach(el => {
     el.contentEditable = 'true';
@@ -1967,9 +2338,9 @@ function onFieldBlur(e) {
   saveField(field, rawText);
 }
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    SAVE STATE
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 function setSaveState(state, msg) {
   const wrap = document.getElementById('save-status-wrap');
   const text = document.getElementById('save-status-text');
@@ -1982,7 +2353,7 @@ function showSavingWarning() { document.getElementById('unsaved-warning').classL
 function hideSavingWarning() { document.getElementById('unsaved-warning').classList.remove('visible'); }
 
 window.addEventListener('beforeunload', (e) => {
-  if (pendingSaveCount > 0) { e.preventDefault(); e.returnValue = ''; return ''; }
+  if (pendingSaveCount > 0) { e.preventDefault(); e.returnValue = ''; }
 });
 
 async function saveField(fieldPath, value) {
@@ -1997,7 +2368,6 @@ async function saveField(fieldPath, value) {
     }
   } catch(err) {
     pendingSaveCount = Math.max(0, pendingSaveCount - 1);
-    console.error('[RID v3] Save error:', err);
     setSaveState('error', '✕ Error — reintenta');
     hideSavingWarning();
     setTimeout(() => setSaveState('','Listo'), 4000);
@@ -2021,33 +2391,25 @@ async function saveFullArray(arrayPath, arrayData) {
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   ARRAY MUTATIONS
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   ARRAY MUTATIONS (arch, historia)
+═══════════════════════════════════════════════════════════════════ */
 window.addArchProduct = function() {
   if (!currentData?.arquitectonico?.products) return;
-  saveFullArray('arquitectonico.products', [...currentData.arquitectonico.products, { code:"ARQ-00X · Nuevo", name:"Nuevo Producto", desc:"Descripción." }]);
+  saveFullArray('arquitectonico.products', [...currentData.arquitectonico.products, { code:"ARQ-00X · Nuevo", name:"Nuevo Producto", desc:"Descripción del producto." }]);
 };
 window.removeArchProduct = function(idx) {
   if (!currentData?.arquitectonico?.products || !confirm('¿Eliminar?')) return;
   saveFullArray('arquitectonico.products', currentData.arquitectonico.products.filter((_,i)=>i!==idx));
-};
-window.addUmkaProduct = function() {
-  if (!currentData?.umka?.products) return;
-  saveFullArray('umka.products', [...currentData.umka.products, { code:"UMK-00X · Nuevo", name:"Nuevo Producto", desc:"Descripción." }]);
-};
-window.removeUmkaProduct = function(idx) {
-  if (!currentData?.umka?.products || !confirm('¿Eliminar?')) return;
-  saveFullArray('umka.products', currentData.umka.products.filter((_,i)=>i!==idx));
 };
 window.removeHistoriaNode = function(idx) {
   if (!currentData?.historia?.nodes || !confirm('¿Eliminar nodo?')) return;
   saveFullArray('historia.nodes', currentData.historia.nodes.filter((_,i)=>i!==idx));
 };
 
-/* ═══════════════════════════════════════════════════════════════════════
-   IMAGE UPLOAD
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   IMAGE UPLOAD (hero, director)
+═══════════════════════════════════════════════════════════════════ */
 window.triggerImageUpload = function(fieldKey) {
   if (!isAdminMode) return;
   document.getElementById(`upload-${fieldKey}`)?.click();
@@ -2064,22 +2426,19 @@ window.handleImageUpload = async function(input, fieldKey) {
     const pathMap  = { heroImage: 'hero.heroImageUrl', directorPhoto: 'director.photoUrl' };
     if (pathMap[fieldKey]) await updateDoc(CONTENT_REF, { [pathMap[fieldKey]]: url });
     pendingSaveCount = Math.max(0, pendingSaveCount - 1);
-    if (pendingSaveCount === 0) {
-      setSaveState('saved', '✓ Imagen guardada');
-      setTimeout(() => { if (pendingSaveCount===0) setSaveState('','Listo'); }, 3000);
-    }
+    setSaveState('saved', '✓ Imagen guardada');
+    setTimeout(() => { if (pendingSaveCount===0) setSaveState('','Listo'); }, 3000);
   } catch(err) {
     pendingSaveCount = Math.max(0, pendingSaveCount - 1);
-    console.error('[RID v3] Image upload error:', err);
     setSaveState('error', '✕ Error al subir imagen');
     hideSavingWarning();
     alert('Error al subir imagen. Verifica permisos de Firebase Storage.');
   }
 };
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    AUTH ACTIONS
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 window.doLogin = async function() {
   const email    = document.getElementById('login-email').value.trim();
   const password = document.getElementById('login-pass').value;
@@ -2101,12 +2460,13 @@ window.doLogout = async function() {
 };
 window.reloadFromFirestore = async function() {
   const snap = await getDoc(CONTENT_REF);
-  if (snap.exists()) { currentData = snap.data(); renderAll(currentData); setSaveState('saved','✓ Datos recargados'); setTimeout(()=>setSaveState('','Listo'),1500); }
+  if (snap.exists()) { currentData = snap.data(); renderAll(currentData); setSaveState('saved','✓ Recargado'); setTimeout(()=>setSaveState('','Listo'),1500); }
+  await loadProyectos();
 };
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    LOGIN MODAL
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 window.openLoginModal = function() {
   document.getElementById('login-modal').classList.add('open');
   setTimeout(() => document.getElementById('login-email')?.focus(), 100);
@@ -2119,52 +2479,42 @@ window.closeLoginModal = function() {
 document.getElementById('login-modal').addEventListener('click', function(e) { if (e.target === this) closeLoginModal(); });
 document.getElementById('login-pass').addEventListener('keydown', (e) => { if (e.key === 'Enter') window.doLogin(); });
 document.addEventListener('keydown', (e) => { if (e.ctrlKey && e.shiftKey && e.key === 'A') { e.preventDefault(); if (!isAdminMode) openLoginModal(); } });
+document.getElementById('proyecto-modal').addEventListener('click', function(e) { if (e.target === this) closeProyectoModal(); });
 
-/* ═══════════════════════════════════════════════════════════════════════
-   CONTACT FORM — Firebase Lead Capture
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   CONTACT FORM
+═══════════════════════════════════════════════════════════════════ */
 document.getElementById('contact-form')?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const form    = e.target;
-  const btn     = document.getElementById('btn-submit');
-  const errEl   = document.getElementById('form-error-msg');
-  const txtEl   = document.getElementById('submit-text');
+  const form   = e.target;
+  const btn    = document.getElementById('btn-submit');
+  const errEl  = document.getElementById('form-error-msg');
+  const txtEl  = document.getElementById('submit-text');
   errEl.classList.remove('show');
 
-  /* Validación */
-  const nombre  = document.getElementById('f-nombre').value.trim();
-  const email   = document.getElementById('f-email').value.trim();
+  const nombre   = document.getElementById('f-nombre').value.trim();
+  const email    = document.getElementById('f-email').value.trim();
   const servicio = document.getElementById('f-servicio').value;
-  if (!nombre || !email || !servicio) {
-    errEl.classList.add('show');
-    return;
-  }
+  if (!nombre || !email || !servicio) { errEl.classList.add('show'); return; }
 
-  /* Submit state */
   btn.disabled = true;
   txtEl.textContent = '⟳ Enviando...';
 
   try {
     const formData = new FormData(form);
     const { folio } = await submitLead(formData);
-
-    /* Mostrar éxito */
     form.style.display = 'none';
     document.getElementById('lead-folio').textContent = folio;
     document.getElementById('form-success').classList.add('show');
-
-    /* Actualizar badge admin si aplica */
     if (isAdminMode) refreshLeadsCount();
   } catch(err) {
-    console.error('[RID v3] Form submit error:', err);
     btn.disabled = false;
     txtEl.textContent = 'Enviar Cotización →';
-    errEl.textContent = '⚠ Error al enviar. Intenta nuevamente o escríbenos directo.';
+    errEl.textContent = '⚠ Error al enviar. Intenta nuevamente.';
     errEl.classList.add('show');
   }
 });
 
-/* File input feedback */
 document.getElementById('f-archivos')?.addEventListener('change', function() {
   const n = this.files.length;
   const hint = document.getElementById('file-hint-text');
@@ -2174,9 +2524,9 @@ document.getElementById('f-archivos')?.addEventListener('change', function() {
   }
 });
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    SERVICE PANEL SWITCHER
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 window.showPanel = function(index, clickedNavItem, clickedTab) {
   document.querySelectorAll('.service-nav-item').forEach(el => el.classList.remove('active'));
   if (clickedNavItem) clickedNavItem.classList.add('active');
@@ -2187,9 +2537,9 @@ window.showPanel = function(index, clickedNavItem, clickedTab) {
   if (panel) panel.classList.add('active');
 };
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    HAMBURGER
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const navDrawer    = document.getElementById('nav-drawer');
 hamburgerBtn.addEventListener('click', () => {
@@ -2207,9 +2557,73 @@ navDrawer.querySelectorAll('a').forEach(link => {
   });
 });
 
-/* ═══════════════════════════════════════════════════════════════════════
-   SCROLL ANIMATIONS & NAV ACTIVE
-═══════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   SCROLL-DRIVEN ASSEMBLY — IntersectionObserver + CSS transitions
+   Estrategia:
+   - Hero SVG: Los paths se dibujan en cascada al entrar en viewport
+   - Pérgola SVG: Se dibuja conforme el usuario hace scroll en la sección
+═══════════════════════════════════════════════════════════════════ */
+function initScrollAssembly() {
+  /* ── Hero Assembly SVG: dibujar en cascada al entrar ── */
+  const heroSection = document.getElementById('inicio');
+  const asmPaths    = document.querySelectorAll('.assembly-path');
+  const centerDot   = document.getElementById('asm-center-dot');
+
+  const heroObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        /* Activar paths en cascada con delays escalonados */
+        asmPaths.forEach((path, idx) => {
+          setTimeout(() => {
+            path.classList.add('drawn');
+          }, idx * 120);
+        });
+        /* Centro aparece último */
+        setTimeout(() => {
+          if (centerDot) centerDot.style.opacity = '1';
+        }, asmPaths.length * 120 + 200);
+        heroObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (heroSection) heroObs.observe(heroSection);
+
+  /* ── Pérgola: scroll-driven con requestAnimationFrame ── */
+  const pergolaPaths = document.querySelectorAll('.pergola-draw-path');
+  const pergolaTexts = document.querySelectorAll('#pergola-svg-wrap text[opacity="0"]');
+  const pergolaWrap  = document.getElementById('pergola-svg-wrap');
+  let pergolaTriggered = false;
+
+  const pergolaObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !pergolaTriggered) {
+        pergolaTriggered = true;
+        /* Dibujar paths de la pérgola en cascada */
+        pergolaPaths.forEach((path, idx) => {
+          setTimeout(() => {
+            path.classList.add('drawn');
+          }, idx * 80);
+        });
+        /* Textos aparecen al final */
+        const totalDelay = pergolaPaths.length * 80 + 200;
+        pergolaTexts.forEach((txt, idx) => {
+          setTimeout(() => {
+            txt.setAttribute('opacity', '1');
+            txt.style.transition = 'opacity 0.5s ease';
+          }, totalDelay + idx * 100);
+        });
+        pergolaObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  if (pergolaWrap) pergolaObs.observe(pergolaWrap);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SCROLL REVEAL + NAV ACTIVE
+═══════════════════════════════════════════════════════════════════ */
 function initScrollReveal() {
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -2219,7 +2633,6 @@ function initScrollReveal() {
       });
     }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
     revealEls.forEach(el => io.observe(el));
-    /* reveal-stagger */
     document.querySelectorAll('.reveal-stagger').forEach(el => io.observe(el));
   } else {
     revealEls.forEach(el => el.classList.add('visible'));
@@ -2246,17 +2659,19 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-/* ═══════════════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    INIT
-═══════════════════════════════════════════════════════════════════════ */
+═══════════════════════════════════════════════════════════════════ */
 startListening().then(() => {
   initScrollReveal();
+  initScrollAssembly();
 }).catch(err => {
-  console.error('[RID v3] Init error:', err);
+  console.error('[RID v4] Init error:', err);
   currentData = DEFAULT_CONTENT;
   renderAll(DEFAULT_CONTENT);
   hideLoadingScreen();
   initScrollReveal();
+  initScrollAssembly();
 });
 
 </script>
